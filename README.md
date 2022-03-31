@@ -4,12 +4,6 @@
 
 <div align="center"><img src="/Wireframes/Otros/sunset.png" alt="icon"></div>
 
-## Sunset.
-
-<div align="center"><img src="/Wireframes/Otros/sunset.png" alt="icon"></div>
-
-![Logo]
-
 Sunset nace por la necesidad de reprensentar modelos unicos no vistos en ninguna otra pagina. Empezo como un hobbie, pero poco a poco, logramos que ademas de ser un pasatiempo se vuelva un ambicioso proyeto con el objetivo de compartir estos modelos con el mundo.
 
 ## Sitios de referencia:
