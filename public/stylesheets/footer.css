@@ -1,0 +1,179 @@
+footer {
+    background-color: black;
+    
+}
+
+footer section .logo {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer section .logo img{
+    padding: 10px 10px;
+    width: 150px;
+    
+}
+
+footer section .logo .usuario i {
+    color:black;
+    padding-top: 7px;
+    padding-right: 9px;
+    font-size: 25px;
+    text-align: center;
+}
+
+footer section .logo .usuario {
+    background-color: white;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+footer section .usuario {
+    display: inline-block;
+    text-align: right;
+}
+footer section .paginas {
+
+    align-self: center;
+    
+    display: flex;
+
+  
+}
+
+footer section .paginas li a {
+    color:white;
+    
+}
+
+footer section .paginas li{
+    padding-bottom: 10px;
+}
+
+footer section .pag{
+   
+    display: flex;
+    justify-content: flex-start;
+    
+    
+    
+}
+
+footer section .pag .paginas1 ul {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 25px;
+    
+}
+
+footer section .pag .paginas1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 35%;
+
+}
+
+footer section .pag .redes1 {
+    display: flex;
+    justify-content: center;
+}
+
+
+footer section .redes {
+    text-align: center;
+    align-self: center;
+    
+
+}
+
+
+footer section .redes li a i {
+    color: black;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+   
+}
+
+footer section .redes li a i:last-child {
+    font-size: 35px;
+}
+
+
+footer section .redes li {
+    font-size: 40px;
+    display: inline;
+    background-color: white;
+    border-radius: 40px;
+    width: 60px;
+    height: 60px;
+    
+}
+
+
+footer section a i {
+    color:white
+}
+
+footer p {
+    text-align: right;
+    color: white;
+    padding-top: 10px;
+    padding-bottom:  10px;
+    padding-right: 10px;
+    font-size: 12px;
+}
+
+
+
+@media (min-width : 500px  ) {
+
+
+    footer section .pag .paginas1{
+   
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 35%;
+
+    }
+    
+
+
+}
+
+
+@media (min-width : 744px) {
+
+    footer section .pag .paginas1{
+   
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40%;
+
+    }
+    
+   
+    
+}
+
+
+@media (min-width : 1080px ) {
+
+    footer section .pag .paginas1{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 45%;
+    }
+}
+
+

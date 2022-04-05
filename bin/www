@@ -89,4 +89,4 @@ function onListening() {
   debug('Listening on ' + bind);
 }
 
-console.log(`Server runnning in https//:localhost:${port}`)     
+console.log(`Server runnning in http://localhost:${port}`)     
