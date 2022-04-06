@@ -1,0 +1,141 @@
+/* .productDetail  {
+    font-family: "AdihausDIN";
+} */
+
+.productDetail{
+    margin-top: 5%;
+   
+}
+
+.productDetail .general {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.productDetail .producto {
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.productDetail .producto .nombre {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    font-family: "AdihausDIN";
+    font-weight: 600;
+    padding: 15px;
+}
+
+.productDetail .producto .precio {
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    padding: 15px;
+    font-family: "AdihausDIN";  
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.productDetail .producto img {
+    width: 100%;
+}
+
+.productDetail .producto p {
+    margin-top: 10px;
+    margin-right: auto;
+    
+}
+.productDetail .acercaDe {
+    margin-top: 10px;
+    
+}
+
+.productDetail aside .descripcion {
+    display: none;
+}
+
+.productDetail aside .descripcion h3 {
+
+    font-family: "AdihausDIN";
+    ;
+}
+
+
+.productDetail aside .descripcion span {
+    font-family: "AdihausDIN";
+}
+
+.productDetail aside p {
+    margin-top: 10px;
+    font-size: 16px;
+    
+    
+    
+    font-family: "AdihausDIN";
+}
+
+.productDetail aside .talle {
+    margin-top: 10px;
+    
+}
+
+.productDetail aside .botones {
+    margin-top: 10px ;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+
+    
+}
+
+.productDetail aside .botones a {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 40px;
+    margin-top: 5px;
+    background-color: black;
+}
+
+.productDetail aside .botones a i {
+    background-color: white;
+    padding-top: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: black;
+}
+
+    
+@media (min-width : 500px  ) {
+
+    
+
+}
+
+
+@media (min-width : 744px) {
+
+
+}
+
+
+
+@media (min-width : 1080px ) {
+
+    
+    
+}

@@ -102,7 +102,7 @@ body header ul li a:first-child {
     header section .iconos {
         display: flex;
         font-size: 25px;
-        gap:2rem;
+        gap:1rem;
         
     }
 
