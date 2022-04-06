@@ -40,8 +40,15 @@ header .iconos li  {
     height: 40px;
 }
 
-body header .logo img{
+body header .logo:hover{
+    
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
 
+body header .logo img{
+    
+    
     width: 170px;
     padding: 10px;
     margin-left: 20px;
