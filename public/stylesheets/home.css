@@ -1,35 +1,27 @@
-body .banner img {
+
+
+ body .banner img {
 
     width: 100%;
     
 }
 
-body  h2 {
-    margin-top: 30px;
-    margin-bottom: 30px;
+
+
+body h2 {
+    margin: 40px 0;
     text-align: center;
 }
 
-
-
 body .buzo {
 
-        
-        
         margin-left: 5%;
         margin-right: 5%;
         text-align: center;
-        justify-content:space-evenly;
         margin-bottom: 50px;
-        border-radius: 10%;
-        background-color: rgb(0, 0, 0);
         width:90%;
         transition: all 0.5s;
-        
-
-        
-        
-        
+                
     
 }
 
@@ -41,51 +33,91 @@ body .buzo img {
     
     margin-bottom: 0;
     width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;    
+    border-radius: 30px; 
 }
 
+.buzo .img-container{
+    overflow: hidden;
+    position: relative;
+  }
 
-body .buzo .descripcion {
-    padding: 5px;
-
-}
-
-/* body .buzo .descripcion nav {
-    margin-top: 5px 0;
-} */
-
-
-body .buzo p,nav{
+  .buzo .img-container p{
     
-    width: 100%;
+    position: absolute;
+    top: 10px;
+    padding: 10px;
+    border-top-right-radius:10px;
+    border-bottom-right-radius: 10px ;
+    left: 0;
+    font-size: 14px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    cursor: pointer;
+  }  
+
+.buzo .img-container .price{
+    position: absolute;
+    bottom: 30px;
+    padding: 30px;
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px ;
+    right: 0;
+    font-size: 16px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+  } 
+  
+
+
+
+.buzo .carrito {
+    
+    margin-top: 20px;
+    background-color: white;
+    display: inline-block;
+
+}
+
+.buzo .carrito:hover {
+    
+    margin-top: 20px;
+    
+    display: inline-block;
+
+}
+
+.buzo .carrito a {
+
+    color: black;
+    
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    
+}
+
+.buzo .carrito a:hover {
+    background-color: #000000;
     color: white;
-    margin-top: 0px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    
 }
+
+
+
+
     
 @media (min-width : 500px  ) {
 
     body .buzo{
 
         width:40%;
-        border-radius:12%;
         margin-left: 0%;
         margin-right: 0%;        
         
     }
 
-    body .buzo img { 
     
-        
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;    
-    }
 
     body .Mas__vendidos {
         display: flex;
@@ -105,7 +137,7 @@ body .buzo p,nav{
     body .buzo{
 
         width:23%;
-        border-radius:12%;
+        
         margin-left: 0;
         margin-right: 0;
      
@@ -117,9 +149,6 @@ body .buzo p,nav{
         display: none;
     }
 }
-
-
-
 
 
 
