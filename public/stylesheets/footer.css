@@ -11,7 +11,7 @@ footer section .logo {
     
 }
 
-footer section .logo:hover img{
+footer section .logo a img:hover {
     transform: scale(1.2);
     transition: all 0.5s;
     
@@ -38,6 +38,9 @@ footer section .logo .usuario {
     height: 40px;
 }
 
+footer section .logo .usuario:hover {
+    transform: scale(1.1);
+}
 
 
 footer section .usuario {
@@ -58,8 +61,14 @@ footer section .paginas li a {
     
 }
 
+
+
 footer section .paginas li{
     padding-bottom: 10px;
+}
+
+footer section .paginas li:hover {
+    transform: scale(1.1);
 }
 
 footer section .pag{
@@ -93,6 +102,7 @@ footer section .pag .redes1 {
 }
 
 
+
 footer section .redes {
     text-align: center;
     align-self: center;
@@ -123,6 +133,7 @@ footer section .redes li {
     height: 60px;
     
 }
+
 
 
 footer section a i {

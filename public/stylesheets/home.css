@@ -13,7 +13,7 @@ body h2 {
 }
 
 body .buzo {
-
+    
         margin-left: 5%;
         margin-right: 5%;
         text-align: center;
@@ -29,15 +29,19 @@ body .buzo:hover {
 }
 
 body .buzo img { 
+    
     cursor: pointer;
     margin-bottom: 0;
     width: 100%;
     border-radius: 30px; 
 }
 
+
+
 .buzo .img-container{
     overflow: hidden;
     position: relative;
+    
   }
 
   .buzo .img-container p{

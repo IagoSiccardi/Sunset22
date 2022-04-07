@@ -4,6 +4,7 @@
 
 .productDetail{
     margin-top: 5%;
+    margin-bottom: 1%;
    
 }
 
@@ -16,6 +17,7 @@
     
     position: relative;
     overflow: hidden;
+    
     
 }
 
@@ -41,6 +43,7 @@
 
 .productDetail .producto img {
     width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all 0.5s;
     
 }
@@ -141,15 +144,19 @@
 
 .productDetail .puedeInteresarte {
     text-align: center;
+    
 }
 
 .productDetail .h3 {
     text-align: center;
+    
+    
 }
 
 .productDetail .h3 h3 {
-    margin-top: 40px;
-    margin-bottom: 20px; 
+    font-size: 1.5rem;
+    margin-top: 70px;
+    margin-bottom: 30px; 
 }
 
 .productDetail .puedeInteresarte .buzo .img-container img {
@@ -190,6 +197,12 @@
 
   .productDetail .puedeInteresarte .buzo:nth-child(3){
     display: none;
+}
+
+
+.productDetail aside .talle select {
+    border: 2px solid black;
+    border-radius: 7px;
 }
     
 @media (min-width : 500px  ) {
@@ -283,7 +296,7 @@
     .productDetail aside .talle select {
             width: 40px;
             height: 20px;
-            font-size: 15px;
+            font-size: 14px;
     } 
    
 }
@@ -311,7 +324,7 @@
     .productDetail aside .talle select {
             width: 50px;
             height: 30px;
-            font-size: 20px;
+            font-size: 15px;
     } 
     
     .productDetail aside .descripcion {

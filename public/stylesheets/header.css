@@ -19,13 +19,26 @@ header section ul {
 
 header section .paginas {
     display: none;
+
     
 }
+
 
 header section .paginas li a {
     color:white;
     
 }
+
+header section .paginas li a:hover {
+    color: var(--NaranjaHeader)
+}
+
+header section .paginas li:hover {
+
+    transform: scale(1.1);
+    
+}
+
 
 header section .iconos {
     display: none;
