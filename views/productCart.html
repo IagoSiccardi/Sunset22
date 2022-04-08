@@ -17,8 +17,8 @@
             <ul class="paginas">
 
                 <li><a href="/">Inicio</a></li>
-                <li><a href="">Nosotros</a></li>
                 <li><a href="">Productos</a></li>
+                <li><a href="">Nosotros</a></li>
             </ul>
 
             <ul class="iconos">
@@ -33,25 +33,55 @@
     
     </header>
     <main class="carrito">
-        <section class="productos">
-            <div class="titulares">
 
-                <h2>Tu carrito</h2>
-                <h3> 2 productos</h3>
-            </div>
-            <article class="producto">
-                 
-                    <img src="/images/Buzos/buzo4.jpg" alt="">
+        <div class="titulares">
+            
+            <h2>Tu carrito</h2>
+            <h3> 2 productos</h3>
+        </div>
+
+        <section class="productos">
+
+            <div class="contenedorProductos">
+
+                <article class="producto">
+                     
+                        <img src="/images/Buzos/buzo4.jpg" alt="">
+                        <div class="descripcion">
+                            <p>Hoodie Sunset Koi</p>
+                            <span>$3999</span>
+                            <div class="talle">
+                                <label for="Talle">Talle :</label>
+                                <select name="talle" id="talle">
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                                </select>
+                            </div>
+                            <div class="cantidad">
+                                <input type="number" value="1" min="1" max="10">
+                            </div>
+                        </div>
+                        <div class="iconos">
+                            <a class="corazon" href=""><i class="fas fa-heart"></i></a>
+                            <a class="x" href=""><i class="fas fa-times"></i></a>
+                        </div>
+                    
+                </article>
+                <article class="producto">
+                    
+                    <img src="/images/Buzos/buzo5.jpg" alt="">
                     <div class="descripcion">
-                        <p>Hoodie Sunset Koi</p>
+                        <p>Hoodie Sunset Griego</p>
                         <span>$3999</span>
                         <div class="talle">
                             <label for="Talle">Talle :</label>
                             <select name="talle" id="talle">
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
                             </select>
                         </div>
                         <div class="cantidad">
@@ -62,76 +92,85 @@
                         <a class="corazon" href=""><i class="fas fa-heart"></i></a>
                         <a class="x" href=""><i class="fas fa-times"></i></a>
                     </div>
-                
-            </article>
-            <article class="producto">
-                
-                <img src="/images/Buzos/buzo5.jpg" alt="">
-                <div class="descripcion">
-                    <p>Hoodie Sunset Griego</p>
-                    <span>$3999</span>
-                    <div class="talle">
-                        <label for="Talle">Talle :</label>
-                        <select name="talle" id="talle">
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                        </select>
-                    </div>
-                    <div class="cantidad">
-                        <input type="number" value="1" min="1" max="10">
-                    </div>
-                </div>
-                <div class="iconos">
-                    <a class="corazon" href=""><i class="fas fa-heart"></i></a>
-                    <a class="x" href=""><i class="fas fa-times"></i></a>
-                </div>
-                
-            </article>
-            <article class="resumen">
-                <h3>Resumen</h3>
-
-                <div class="Columnas">
-
-                    <div class="primerColumna">
                     
-                        <p>2 Productos</p>
-                        <p>Envio</p>
-                        <p>Total</p>
+                </article>
+            </div>
+
+            <div class="contenedorResumenPagos">
+
+                <article class="resumen">
+                    <h3>Resumen</h3>
     
+                    <div class="Columnas">
+    
+                        <div class="primerColumna">
+                        
+                            <p>2 Productos</p>
+                            <p>Envio</p>
+                            <p>Total</p>
+        
+                        </div>
+        
+                        <div class="segundaColumna">
+                            <span>$7.998</span>
+                            <p>Gratis</p>
+                            <span>$7.998</span>
+        
+                        </div>
+                        
                     </div>
     
-                    <div class="segundaColumna">
-                        <span>$7.998</span>
-                        <p>Gratis</p>
-                        <span>$7.998</span>
+                    <a class="botonCompra" href="">Comprar</a>
     
+                </article>
+    
+                <article class="pago">
+                    <h3>Opciones de pago</h3>
+                    <div>
+                        <img src="/images/mp.png" alt="">
+                        <img src="/images/pg.png" alt="">
+                        <img src="/images/mastercard-png.png" alt="">
+                        <img src="/images/visa.png" alt="">
                     </div>
-                    
-                </div>
-
-                <a class="botonCompra" href="">Comprar</a>
-
-            </article>
-
-            <article class="pago">
-                <h3>Opciones de pago</h3>
-                <div>
-                    <img src="/images/mp.png" alt="">
-                    <img src="/images/pg.png" alt="">
-                    <img src="/images/mastercard-png.png" alt="">
-                    <img src="/images/visa.png" alt="">
-                </div>
-            </article>
-
-
+                </article>
+            </div>
 
         </section>
-        
-            
 
         
     </main>
+    
+    <footer>
+        <section>
+
+            <div class="logo"> <a href="#"><img src="/images/Sin título-1.png" alt=""></a>
+            <a class="usuario" href="/login"><i class="fas fa-user"></i>
+            </div>
+           
+
+            <div class="pag">   
+                <div class="paginas1">
+                    
+                    <ul class="paginas">
+
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Nosotros</a></li>
+                    </ul> 
+                    
+                </div>
+                <div class="redes1">
+                    <ul class="redes">
+                        <li><a href="https://ultramsg.com/m/3LJeJun" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.instagram.com/leomessi/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="mailto:iago.siccardi@gmail.com?subject=Sunset%20Argentina%20" target="_blank" ><i class="fas fa-envelope"></i></a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <p>© 2022 Sunset Argentina</p>
+        </section>
+        </footer>
 </body>
 </html>
