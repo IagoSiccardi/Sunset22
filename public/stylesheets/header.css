@@ -101,12 +101,14 @@ body header ul li  {
 body header .iconos li a {
     
     color: black;
-    padding-top: 6px;
+    padding-top: 8px;
     padding-bottom: -6px;
 }
 
-body header ul li a:first-child {
-    padding-bottom: 8px;
+
+
+body header .iconos li a i {
+    padding-top: 3px;
 }
 
 @media (min-width : 500px  ) {

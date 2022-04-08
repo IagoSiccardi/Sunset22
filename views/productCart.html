@@ -4,9 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/cfbbdf49a0.js" crossorigin="anonymous"></script>
+    <title>Product Cart</title>
 </head>
 <body>
-    <h1>Cart</h1>
+    <header> 
+        <section>
+
+            <div class="logo"> <a href="/"><img src="/images/Sin título-1.png" alt=""></div></a>
+
+            <ul class="paginas">
+
+                <li><a href="/">Inicio</a></li>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Productos</a></li>
+            </ul>
+
+            <ul class="iconos">
+                
+                <li><a href="/login"><i class="fas fa-user"></i></a></li>
+                <li><a href=""><i class="fas fa-heart"></i></a></li>
+                <li><a href="/product-cart"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+            <div class="burger__menu"> <i class="fas fa-bars"></i> </div>
+
+        </section>
+    
+    </header>
+    <main class="carrito">
+        <section class="productos">
+            <div class="titulares">
+
+                <h2>Tu carrito</h2>
+                <h3> 2 productos</h3>
+            </div>
+            <article class="producto">
+                 
+                    <img src="/images/Buzos/buzo4.jpg" alt="">
+                    <div class="descripcion">
+                        <p>Hoodie Sunset Koi</p>
+                        <span>$3999</span>
+                        <div class="talle">
+                            <label for="Talle">Talle :</label>
+                            <select name="talle" id="talle">
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                            </select>
+                        </div>
+                        <div class="cantidad">
+                            <input type="number" value="1" min="1" max="10">
+                        </div>
+                    </div>
+                    <div class="iconos">
+                        <a class="corazon" href=""><i class="fas fa-heart"></i></a>
+                        <a class="x" href=""><i class="fas fa-times"></i></a>
+                    </div>
+                
+            </article>
+            <article class="producto">
+                
+                <img src="/images/Buzos/buzo5.jpg" alt="">
+                <div class="descripcion">
+                    <p>Hoodie Sunset Griego</p>
+                    <span>$3999</span>
+                    <div class="talle">
+                        <label for="Talle">Talle :</label>
+                        <select name="talle" id="talle">
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+                    </div>
+                    <div class="cantidad">
+                        <input type="number" value="1" min="1" max="10">
+                    </div>
+                </div>
+                <div class="iconos">
+                    <a class="corazon" href=""><i class="fas fa-heart"></i></a>
+                    <a class="x" href=""><i class="fas fa-times"></i></a>
+                </div>
+                
+            </article>
+            <article class="resumen">
+                <h3>Resumen</h3>
+
+                <div class="Columnas">
+
+                    <div class="primerColumna">
+                    
+                        <p>2 Productos</p>
+                        <p>Envio</p>
+                        <p>Total</p>
+    
+                    </div>
+    
+                    <div class="segundaColumna">
+                        <span>$7.998</span>
+                        <p>Gratis</p>
+                        <span>$7.998</span>
+    
+                    </div>
+                    
+                </div>
+
+                <a class="botonCompra" href="">Comprar</a>
+
+            </article>
+
+            <article class="pago">
+                <h3>Opciones de pago</h3>
+                <div>
+                    <img src="/images/mp.png" alt="">
+                    <img src="/images/pg.png" alt="">
+                    <img src="/images/mastercard-png.png" alt="">
+                    <img src="/images/visa.png" alt="">
+                </div>
+            </article>
+
+
+
+        </section>
+        
+            
+
+        
+    </main>
 </body>
 </html>
