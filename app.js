@@ -32,6 +32,8 @@ app.get('/product-detail',(req,res) => res.sendFile(path.join(__dirname,'views',
 
 app.get('/register',(req,res) => res.sendFile(path.join(__dirname,'views','register.html')))
 
+app.get('/productos',(req,res) => res.sendFile(path.join(__dirname,'views','productos.html')))
+
 
 
 // catch 404 and forward to error handler
