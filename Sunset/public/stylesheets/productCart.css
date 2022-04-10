@@ -1,0 +1,321 @@
+
+
+.carrito {
+    margin-left: 5%;
+    margin-right: 5% ;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.carrito .titulares {
+    
+    text-align: left;
+}
+
+.carrito .titulares h2 {
+    font-family:"AdihausDIN";
+    font-size: 3rem;
+
+
+}
+
+.carrito .titulares h3 {
+    font-family:"AdihausDIN";
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+    
+}
+
+
+.carrito .producto {
+    display: flex;
+    border: solid 2px black;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+.carrito .producto img {
+    width: 50%;
+}
+
+.carrito .producto .descripcion {
+    margin-left: 5px;
+    margin-right: 5px
+    
+}
+
+.carrito .producto .descripcion p{
+    font-family:"AdihausDIN";
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.carrito .producto .descripcion span {
+    display: inline-block;
+    font-family:"AdihausDIN";
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    
+}
+
+.carrito .producto .descripcion .talle {
+    margin-top: 10px;
+    font-size: 1rem;
+    
+}
+
+.carrito .producto .descripcion .cantidad {
+    margin-top: 10px;
+    
+    
+}
+
+.carrito .producto .descripcion .cantidad input {
+    
+    font-size: 1rem;
+    width: 35px;
+}
+
+
+.carrito .producto .iconos .corazon {
+    position: absolute;
+    bottom: 0;
+    right: 2px;
+    color:black   
+}
+
+.carrito .producto .iconos .x {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    color:black       
+}
+.carrito .producto .iconos .x i {
+
+    font-size: 18px;
+}
+
+.carrito .productos .resumen {
+    border: solid 2px black; 
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+
+
+
+.carrito .productos .resumen h3{
+    font-size: 1.5rem;
+    font-family: "AdihausDIN";
+    text-align: center;
+    margin: 20px
+
+}
+
+.carrito .productos .resumen .Columnas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 10px;
+}
+
+.carrito .productos .resumen .Columnas p,span {
+    font-family: "AdihausDIN";
+    font-size: 1rem;
+    font-weight: 600;
+    
+}
+
+.Columnas .primerColumna {
+    width: 45%;
+    text-align: left;
+}
+
+.Columnas .segundaColumna {
+    width: 45%;
+    text-align: right;
+}
+
+
+.Columnas .primerColumna p {
+    margin-bottom: 10px;
+}
+
+.Columnas .segundaColumna p{
+    margin-bottom: 10px;
+}
+
+.Columnas .segundaColumna span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.carrito .productos .resumen .botonCompra {
+    display: inline-block;
+    width: 75%;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    border-radius: 50px;
+    margin-top: 5px;
+    background-color: black;
+    margin: 20px 0;
+    transition: all 0.5s;
+}
+
+.carrito .productos .resumen .botonCompra:hover {
+    transform: scale(1.05);
+    background-color: var(--Naranja);
+    color: black;
+}
+
+
+.carrito .productos .pago  {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    
+    
+}
+
+.carrito .productos .pago h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-family: "AdihausDIN";
+    font-size: 1.5rem;
+    
+}
+
+.carrito .productos .pago div {
+    width: 75%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.carrito .productos .pago div img{
+    
+    width: 33%
+}
+
+
+@media (min-width : 500px  ) {
+
+    .carrito .producto .descripcion {
+        margin-right: 15px;
+        
+    }
+
+    .carrito .producto .descripcion p{
+        
+        font-size: 1.7rem;
+        margin-top: 20px;
+    }
+
+
+    .carrito .producto .descripcion span {
+        
+        font-size: 1.4rem;
+        margin-top: 20px;
+        
+    }
+
+    .carrito .producto .descripcion .talle {
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+
+
+    .carrito .producto .descripcion .cantidad input {
+        font-size: 1.3rem;
+        margin-top: 20px;
+    }
+
+
+
+
+}
+
+
+@media (min-width : 744px) {
+
+    .carrito .producto .descripcion .cantidad input {
+        font-size: 1.3rem;
+        margin-top: 5px;
+        margin-bottom: 5px  ;
+    }
+
+
+    .carrito .productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .carrito .productos .contenedorProductos {
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .carrito .productos .contenedorProductos .producto img {
+        width: 55%;
+    }
+
+    .carrito .productos .contenedorResumenPagos {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5%;
+        width: 45%;
+    }
+
+    
+
+    .carrito .productos .resumen {
+        margin-top: 0;
+        height: 236px;
+    }
+
+    .carrito .productos .resumen .botonCompra {
+        margin-bottom: 5px;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    
+}
+
+
+@media (min-width : 1080px ) {
+
+    
+
+    .carrito .productos .resumen .botonCompra {
+        margin-top: 20px;
+        margin-bottom: 2.5rem;
+        padding: 20px;
+    }
+
+    .carrito .productos .resumen {
+        
+        height: 260px;
+    }
+
+    .carrito .productos .pago h3 {
+        font-size: 2rem;
+    }
+
+    .carrito .productos .pago div img {
+        width:33%;
+    }
+}
