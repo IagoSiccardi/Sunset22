@@ -1,0 +1,185 @@
+
+.formularios {
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-evenly;
+    height: 73vh;
+    background-color: var(--Naranja);
+    background-image: url(/images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+
+}
+
+.formularios section {
+    margin: 50px 0;
+}
+
+
+.formularios section h2 {
+    margin-top: 0px;
+    
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: 'Roboto';
+}
+
+.formularios section p {
+    font-family: 'Roboto';
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 400;
+    width: 100%;
+    
+}
+
+.formularios section p a {
+    color: black;
+    font-weight: bolder;
+}
+
+
+
+
+.formularios section form div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin:20px 0
+    
+   
+}
+
+
+.formularios section form div label {
+    display: block;
+    width: 75%;
+    border: 2px solid black;
+    padding: 8px 10px;
+    position: relative;
+    border-radius: 4px;
+    
+}
+
+.formularios section form div label input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'AdihausDin';
+    font-weight: 600;
+}
+
+.formularios section form div label span {
+    color: gray;
+    padding: 0;
+    position: absolute;
+    top: 8px;
+    left: 10px;    
+    font-size: 16px;
+    font-family: 'AdihausDin';
+
+
+}
+
+/* .formularios section form .terminos {
+    width: 100% ;
+} 
+
+.formularios section form .terminos input{
+    margin: 0 10px;
+}
+
+.formularios section form .terminos .terminosCondiciones {
+    width: 30px;
+} */
+
+.formularios section form div .loginButton {
+    background-color: transparent;
+    padding: 10px 0;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top:35px ;
+    margin-bottom: 10px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.formularios section form div .registerButton {
+    background-color: transparent;
+    padding: 10px 0;
+    border-radius: 25px;
+    border: 2px solid black;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    width: 30%;
+    cursor: pointer;
+}
+
+.formularios section form div button:hover {
+    transition: 0.25s;
+    background-color: black;
+    border: 2px solid black;
+    color: var(--Naranja);
+    
+}
+
+
+.formularios section form div label:focus {
+    border-color: var(--Naranja);
+
+}
+
+
+.formularios section form div label span {
+    left: 2px;
+    top: -10px;
+    color: black;
+    font-size: 14px;
+    border-radius: 25px;
+    padding: 0 5px;
+    background-color: var(--Naranja)
+}
+
+@media (min-width : 500px) {
+
+    .formularios section form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap
+    }
+   
+
+    .formularios section form div {
+        width: 80%;
+    }
+}
+
+@media (min-width : 744px) {
+   
+    .formularios section form div {
+        width: 60%;
+    }
+}
+
+
+@media (min-width : 1080px) {
+
+    .formularios section form div {
+        width: 40%;
+    }
+}
