@@ -7,6 +7,7 @@
     height: 73vh;
     background-color: var(--Naranja);
     background-image: url(/images/background.jpg);
+    background-blend-mode: soft-light;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -20,8 +21,7 @@
 
 
 .formularios section h2 {
-    margin-top: 0px;
-    
+    margin-bottom: 10px;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
@@ -33,9 +33,20 @@
     font-size: 15px;
     margin-top: 20px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
     width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 5px;
     
+}
+
+.formularios section .terminos {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .formularios section p a {
@@ -91,17 +102,6 @@
 
 }
 
-/* .formularios section form .terminos {
-    width: 100% ;
-} 
-
-.formularios section form .terminos input{
-    margin: 0 10px;
-}
-
-.formularios section form .terminos .terminosCondiciones {
-    width: 30px;
-} */
 
 .formularios section form div .loginButton {
     background-color: transparent;
@@ -110,7 +110,7 @@
     border: 2px solid black;
     font-size: 20px;
     font-weight: 500;
-    margin-top:35px ;
+    margin-top:20px ;
     margin-bottom: 10px;
     width: 30%;
     cursor: pointer;
