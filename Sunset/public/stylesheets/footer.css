@@ -47,14 +47,7 @@ footer section .usuario {
     display: inline-block;
     text-align: right;
 }
-footer section .paginas {
 
-    align-self: center;
-    
-    display: flex;
-
-  
-}
 
 footer section .paginas li a {
     color:white;
@@ -81,7 +74,7 @@ footer section .pag{
 }
 
 footer section .pag .paginas1 ul {
-    display: flex;
+    display: none;
     flex-direction: column;
 
     padding-left: 25px;
@@ -161,6 +154,10 @@ footer p {
         align-items: center;
         width: 35%;
 
+    }
+
+    footer section .pag .paginas1 ul {
+        display: flex;
     }
     
 

@@ -4,7 +4,7 @@
     flex-direction: column;
     
     justify-content: space-evenly;
-    height: 73vh;
+    height: 76vh;
     background-color: var(--Naranja);
     background-image: url(/images/background.jpg);
     background-blend-mode: soft-light;
@@ -50,8 +50,10 @@
 }
 
 .formularios section p a {
-    color: black;
-    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    text-transform: uppercase;
+   
 }
 
 
@@ -171,6 +173,10 @@
 
 @media (min-width : 744px) {
    
+    .formularios {
+        height: 73vh;
+    }
+
     .formularios section form div {
         width: 60%;
     }
