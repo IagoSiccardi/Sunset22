@@ -116,6 +116,7 @@
     margin-bottom: 10px;
     width: 30%;
     cursor: pointer;
+    
 }
 
 .formularios section form div .registerButton {
@@ -128,10 +129,11 @@
     margin-bottom: 10px;
     width: 30%;
     cursor: pointer;
+    transition: 0.25s;
 }
 
 .formularios section form div button:hover {
-    transition: 0.25s;
+    
     background-color: black;
     border: 2px solid black;
     color: var(--Naranja);

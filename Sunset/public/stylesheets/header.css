@@ -51,13 +51,24 @@ header .iconos li  {
     border-radius: 40px;
     width: 40px;
     height: 40px;
+    transition: all .40s;
+}
+
+header .iconos li:hover {
+    transform: scale(1.2);
 }
 
 body header .logo:hover{
     
     transform: scale(1.2);
+    
+}
+
+body header .logo {
+
     transition: all 0.5s;
 }
+
 
 body header .logo img{
     
