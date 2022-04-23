@@ -2,6 +2,9 @@
 @import url('//db.onlinewebfonts.com/c/c0cd6ec8ce6d2bbd315a13b62ed13550?family=AdihausDIN');
 @import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 @import './variables.css';
 @import './footer.css';
 @import './header.css';
@@ -12,4 +15,5 @@
 @import './productos.css';
 @import './general.css';
 @import './formularios.css';
+@import './nosotros.css';
 @import './404.css';

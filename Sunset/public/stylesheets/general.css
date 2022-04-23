@@ -11,6 +11,9 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: #f5f3f4
+}
 
 ul{
     list-style: none;

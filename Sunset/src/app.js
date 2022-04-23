@@ -34,6 +34,8 @@ app.get('/register',(req,res) => res.sendFile(path.join(__dirname,'views','regis
 
 app.get('/productos',(req,res) => res.sendFile(path.join(__dirname,'views','productos.html')))
 
+app.get('/nosotros',(req,res) => res.sendFile(path.join(__dirname,'views','nosotros.html')))
+
 app.get('*',(req,res) => res.sendFile(path.join(__dirname,'views','error404.html')))
 
 

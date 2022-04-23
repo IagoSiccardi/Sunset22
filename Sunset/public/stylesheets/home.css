@@ -1,34 +1,78 @@
 
+body .banner {
+   /*  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
 
+    position: relative;
+    
+}
 
-
-body .banner img {
-
-    width: 100%;
+body .banner .sunset{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    right: 5px;
+    text-align: right;
     
     
 }
 
-body .c {
-    margin: 50px 0;
-    text-align: center;
+
+
+body .banner .sunset .vesti{
+    font-family: 'Poiret One';
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: -40px;
+}
+
+body .banner .sunset .sunsetSpan {
+    font-family: 'Archivo Black';
     font-size: 3rem;
-    font-weight: 600;
+    color: var(--Naranja);
+    padding: 0;
 }
+
+
+
+body .banner .imagen {
+    background-image: url(/images/buzoBanner.png);
+    
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    height: 45vh;
+    width: 100%;
+    text-align: right;
+    
+}
+
+
 
 body .colecciones {
     display: block;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 50px;
+    justify-content: center;
+    gap: 40px;
+    margin-left:5%;
+    margin-right: 5%;
 }
 
 body .colecciones .coleccion {
-    margin: 20px auto;
-    width: 90%;
+    margin: 10px 0;
     position: relative;
     overflow: hidden;
-    align-items: center;    
+    align-items: center;
+    height: 50%;
+     
+    
    
     
 }
@@ -36,7 +80,9 @@ body .colecciones .coleccion {
 
 body .colecciones .coleccion img {
     width: 100%;
+    height: 100%;
     transition: all 0.5s;
+    
     
     
 }
@@ -88,6 +134,7 @@ body .buzo {
         margin-bottom: 50px;
         width:90%;   
         
+        
 }
 
 body .buzo .img-container:hover {
@@ -103,6 +150,7 @@ body .buzo img {
     margin-bottom: 0;
     width: 100%;
     border-radius: 30px; 
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 
@@ -111,6 +159,7 @@ body .buzo img {
     overflow: hidden;
     position: relative;
     transition: all 0.5s; 
+    
     
   }
 
@@ -178,15 +227,36 @@ body .buzo img {
 @media (min-width : 500px  ) {
 
 
+
+    body .banner .sunset .vesti{
+       
+        font-size: 4.5rem;
+        padding: 0;
+        position: absolute;
+        right: 10px;
+        top: -40px;
+    }
+    
+    body .banner .sunset .sunsetSpan {
+        font-family: 'Archivo Black';
+        font-size: 5rem;
+        color: var(--Naranja);
+        padding: 0;
+    }
+    
+
+
     body .colecciones {
         display: flex;
+        
         
     }
     
     body .colecciones .coleccion {
         width: 45%;
-          
-       
+        
+        
+        
         
     }
 
@@ -219,6 +289,61 @@ body .buzo img {
 
 
 @media (min-width : 744px) {
+
+    body .banner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        position: relative;
+        
+    }
+    
+    body .banner .sunset{
+        width: 30%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+       
+        margin-left:50px;
+        
+    }
+    
+    
+    
+    body .banner .sunset .vesti{
+        position: relative;
+        font-size: 5rem;
+        
+    }
+    
+    body .banner .sunset .sunsetSpan {
+        position: relative;
+        font-size: 6rem;
+        
+        
+    }
+    
+    
+    
+    body .banner .imagen {
+        
+        width: 60%;
+        background-size: 65vh;
+        height: 94vh;
+       
+        
+    }
+
+
+    body .colecciones .coleccion {
+        width: 45%;
+        height: 90vh;
+    }
+
+
     body .colecciones .coleccion .glitch {
         font-size: 3rem;
     }
@@ -228,6 +353,38 @@ body .buzo img {
 
 
 @media (min-width : 1080px ) {
+
+    body .banner .sunset{
+        width: 40%;
+        
+    }
+    
+    
+    
+    body .banner .sunset .vesti{
+        
+        font-size: 8rem;
+        
+    }
+    
+    body .banner .sunset .sunsetSpan {
+        
+        font-size: 9rem;
+        
+        
+    }
+    
+    
+    
+    body .banner .imagen {
+        width: 50%;
+       
+        
+    }
+
+
+
+
 
     body .buzo{
 

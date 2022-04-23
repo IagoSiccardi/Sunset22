@@ -1,0 +1,56 @@
+.nosotros {
+   height: 76vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.nosotros .container {
+   margin: 0px 5%;
+   
+   
+}
+
+.nosotros .container h1 {
+    text-align: center;
+    margin-top: 40px ;
+    font-size: 3rem;
+   
+    font-weight: 500;
+
+
+}
+
+.nosotros .descripcion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px ;
+    margin-bottom: 50px;
+    
+    
+    
+}
+
+.nosotros .descripcion p {
+    width: 75%;
+    font-size: 16px;
+}
+
+
+@media (min-width : 500px) {
+    .nosotros .descripcion p {
+        
+        font-size: 18px;
+    }
+    
+}
+
+@media (min-width : 744px) {
+    .nosotros .descripcion p {
+        
+        font-size: 20px;
+    }
+    
+}
