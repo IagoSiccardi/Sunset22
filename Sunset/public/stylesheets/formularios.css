@@ -56,9 +56,6 @@
    
 }
 
-
-
-
 .formularios section form div {
     display: flex;
     flex-wrap: wrap;
@@ -81,6 +78,7 @@
 }
 
 .formularios section form div label input {
+    
     display: block;
     width: 100%;
     border: none;

@@ -12,7 +12,23 @@ html {
 }
 
 body {
-    background-color: #f5f3f4
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+    background-color: rgb(255, 255, 255);
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+
+   
+    background-clip: content-box;
+    background-color: var(--Naranja)
+}
+
+input {
+    accent-color: var(--Naranja)
 }
 
 ul{
