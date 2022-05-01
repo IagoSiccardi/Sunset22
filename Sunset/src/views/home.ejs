@@ -1,38 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
-    <script src="https://kit.fontawesome.com/cfbbdf49a0.js" crossorigin="anonymous"></script>
-    <title>Sunset</title>
-</head>
+<%- include('./partials/head',{
+    title: 'Sunset'
+}) %> 
 <body>
-    <header> 
-        <section>
-
-            <div class="logo"> <a href="/"><img src="/images/Sin título-1.png" alt=""></div></a>
-
-            <ul class="paginas">
-
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/productos">Productos</a></li>
-                <li><a href="/nosotros">Nosotros</a></li>
-            </ul>
-
-            <ul class="iconos">
-                
-                <li><a href="/login"><i class="fas fa-user"></i></a></li>
-                <li><a href=""><i class="fas fa-heart"></i></a></li>
-                <li><a href="/product-cart"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-            <div class="burger__menu"> <i class="fas fa-bars"></i> </div>
-
-        </section>
-    
-    </header>
-
+    <%- include('./partials/header') %> 
     <body>
        
         <div class="banner"> 
@@ -149,38 +121,7 @@
         
         </section>
         
-        <footer>
-            <section>
-
-                <div class="logo"> <a href="#"><img src="/images/Sin título-1.png" alt=""></a>
-                <a class="usuario" href="/login"><i class="fas fa-user"></i>
-                </div>
-               
-
-                <div class="pag">   
-                    <div class="paginas1">
-                        
-                        <ul class="paginas">
-    
-                            <li><a href="/">Inicio</a></li>
-                            <li><a href="/productos">Productos</a></li>
-                            <li><a href="/nosotros">Nosotros</a></li>
-                        </ul> 
-                        
-                    </div>
-                    <div class="redes1">
-                        <ul class="redes">
-                            <li><a href="https://ultramsg.com/m/3LJeJun" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-                            <li><a href="https://www.instagram.com/leomessi/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="mailto:iago.siccardi@gmail.com?subject=Sunset%20Argentina%20" target="_blank" ><i class="fas fa-envelope"></i></a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <p>© 2022 Sunset Argentina</p>
-            </section>
-            </footer>
+        <%- include('./partials/footer') %> 
     
 </body>
 </html>
