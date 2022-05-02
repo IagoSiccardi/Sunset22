@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head',{
+        title: 'Sunset | Product Detail'
+    }) %> 
+<body>
+    <%- include('../partials/header') %> 
+    <main class="productDetail">
+        <section class="general">
+
+            <div class="producto">
+                <img src="/images/Buzos/buzo1.jpg" alt="">
+                <p class="nombre">Hoddie Sunset Griego</p>
+                <span class="precio">$3999</span>
+                
+                <p class="acercaDe">Hoodie de algódon con frisa estampado. <br>
+                    Hasta 3 cuotas sin interés. <br>
+                    Envíos a todo el pais</p>
+            </div>
+    
+    
+            <aside>
+                <div class="descripcion">
+                    <h3>Hoddie Sunset Griego</h3>
+                    <span>$3999</span>
+                    
+                </div>
+    
+                <p><i class="fas fa-credit-card"></i> 3 cuotas sin interés de $1.333</p>
+    
+                <div class="talle">
+                    
+                    <label for="Talle">Talle :</label>
+                    <select name="talle" id="talle">
+                        <option value="s">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+    
+                </div>
+    
+                <div class="botones">
+                    <a href="#">Añadir al carrito <i class="fas fa-shopping-cart"></i></a>
+                    <a href="#">Añadir a favoritos <i class="fas fa-heart"></i></a>
+                </div>
+            </aside>
+        </section>
+        <div class="h3">
+            <h3>Puede interesarte</h3>
+        </div>
+        <section class="puedeInteresarte">
+            <article class="buzo">
+                <div class="img-container">
+                    <a href=""> <img src="/images/Buzos/buzoHell1.jpg" alt="producto 1"> </a>
+                  <span class="price">$3999</span>
+                  </span>
+                  <p>Hoddie Sunset Hell Snake</p>
+                </div>
+            </article>
+            <article class="buzo">
+                <div class="img-container">
+                    <a href=""> <img src="/images/Buzos/buzo2.jpg" alt="producto 1"> </a>
+                  <span class="price">$3999</span>
+                  </span>
+                  <p>Hoddie Sunset Koi</p>
+                </div>
+            </article>
+            <article class="buzo">
+                <div class="img-container">
+                    <a href=""> <img src="/images/Buzos/buzoHell2.jpg" alt="producto 1"> </a>
+                  <span class="price">$3999</span>
+                  </span>
+                  <p>Hoddie Sunset Hell Diablo</p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>

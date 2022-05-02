@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head',{
+        title: 'Sunset | Register'
+    }) %> 
+<body>
+    <%- include('../partials/header') %> 
+    <main class="formularios">
+
+        <section>
+            <h2>Bienvenid@!</h2>
+            <form action="">
+                <div>
+                    <label>
+                        <span>Nombre y apellido</span>
+                        <input type="text" name="nombre" autocomplete="off" required>
+
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="usuario" autocomplete="off" required>
+
+                    </label>
+
+                </div>
+                <div>
+                    <label>
+                        <span>Contraseña</span>
+                        <input type="password" name="password" autocomplete="off" required>
+                    </label>
+                </div>
+
+                <div>
+                    <label>
+                        <span>Repita su contraseña</span>
+                        <input type="password" name="passwordRepeat" autocomplete="off" required>
+                    </label>
+                </div>
+
+                <p class="terminos">Acepto los terminos y condiciones<input type="checkbox" name="" id="" required></p>
+
+                <div>
+                
+                    <button class="registerButton" type="submit">Crear cuenta</button>
+                    
+                </div>
+            
+
+            </form>
+        </section>
+        
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>
