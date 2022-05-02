@@ -9,6 +9,7 @@
 
 .PRODUCTOS .colecciones .coleccion {
     width: 45%;
+    height: 85vh;
     position: relative;
     overflow: hidden;
     align-items: center;    
