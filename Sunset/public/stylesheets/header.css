@@ -29,15 +29,21 @@ header section .paginas li a {
     
 }
 
-header section .paginas li a:hover {
-    color: var(--NaranjaHeader)
+header section .paginas li {
+    
+    transition: all 0.25s; 
+    
+   
 }
 
 header section .paginas li:hover {
 
-    transform: scale(1.1);
+    transform: scale(1.1)
+    
     
 }
+
+
 
 
 header section .iconos {

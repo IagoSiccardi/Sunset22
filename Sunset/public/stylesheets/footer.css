@@ -64,6 +64,7 @@ footer section .paginas li a {
 
 footer section .paginas li{
     padding-bottom: 10px;
+    transition: all .25s;
 }
 
 footer section .paginas li:hover {

@@ -5,8 +5,8 @@ const {productCart,productDetail,productos} = require ('../controllers/productCo
 /* /products */
 
 router.get('/', productos)
-router.get ('/productCart', productCart)
-router.get('/productDetail', productDetail)
+router.get ('/cart', productCart)
+router.get('/detail', productDetail)
 
 
 module.exports = router

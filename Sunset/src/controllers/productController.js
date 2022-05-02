@@ -1,13 +1,13 @@
 module.exports = {
     productCart: (req,res) => {
-        res.render ('productCart')
+        res.render ('./products/productCart')
     },
     
     productDetail: (req,res) => {
-        res.render ('productDetail')
+        res.render ('./products/productDetail')
     },
 
     productos: (req,res) => {
-        res.render ('productos')
+        res.render ('./products/productos')
     }
 }
