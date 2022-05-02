@@ -1,31 +1,31 @@
+@keyframes bannerMovement {
+ 
+    
+    50% {
+        
+        
+         transform: rotateX(180deg) 
+    }
+}
+
 @keyframes down {
+
+
+
     0% {
         transform: translateY(0px);
         
     }
 
-    20% {
-        transform: translateY(0px);
-        
-    }
-    40% {
+    50% {
         transform: translateY(10px);
         
     }
-
-    60% {
-        transform: translateY(0px);
-        
-    }
-    80% {
-        transform: translateY(10px);
-        
-    }
-
     100% {
-        transform: translateY(0px);
         
+        transform: translateY(0px);
     }
+   
 }
 
 
@@ -69,6 +69,9 @@ body .banner .sunset .sunsetSpan {
     font-size: 3rem;
     color: var(--Naranja);
     padding: 0;
+    animation: bannerMovement normal 1s  ;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
 }
 
 
@@ -91,8 +94,8 @@ body .banner .bajar {
     color: var(--Naranja);
     font-size: 50px;
     left: calc(50% - 25px);
-    animation: down normal 1s;
-    animation-iteration-count: 2;
+    animation: down normal .5s;
+    animation-iteration-count: 5;
     transition: all .5s;
 }
 
@@ -389,7 +392,7 @@ body .buzo img {
 
 
     body .colecciones .coleccion {
-        width: 45%;
+        width: 49%;
         height: 90vh;
     }
 
@@ -432,7 +435,10 @@ body .buzo img {
         
     }
 
-
+    body .colecciones .coleccion {
+        width: 45%;
+        
+    }
 
 
 
