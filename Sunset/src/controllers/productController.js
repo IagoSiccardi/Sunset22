@@ -1,5 +1,15 @@
 const products = require ('../data/products.json')
 
+
+const getRandom = (min, max) => {
+
+    return Math.round( Math.random() * (max - min) + min)
+
+  }
+
+
+  
+
 module.exports = {
     productCart: (req,res) => {
         
@@ -13,6 +23,7 @@ module.exports = {
         
         res.render ('./products/productDetail',{
             product,
+            getRandom
 
         })
     },
