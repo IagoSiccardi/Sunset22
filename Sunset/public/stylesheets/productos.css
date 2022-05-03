@@ -1,15 +1,19 @@
-
+.PRODUCTOS {
+    margin: 0px 5%;
+}
 
 .PRODUCTOS .colecciones {
-    margin: 50px 0;
+    
+    margin: 20px 0px 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    
+    justify-content: space-between;
 }
 
 .PRODUCTOS .colecciones .coleccion {
-    width: 45%;
-    height: 85vh;
+    width: 48%;
+    height: 35vh;
     position: relative;
     overflow: hidden;
     align-items: center;    
@@ -51,21 +55,82 @@
 
 }
 
+.PRODUCTOS .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.PRODUCTOS .container .h2 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-family: 'AdihausDIN';
+    font-size: 2rem;
+}
+
+.PRODUCTOS .buzo {
+    
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    margin-bottom: 50px;
+    width:90%;   
+    
+    
+}
+
+
+
 
 @media (min-width : 500px  ) {
 
+    .PRODUCTOS .colecciones .coleccion {
+        height: 45vh;
+    }
 
     .PRODUCTOS .colecciones .coleccion .glitch {
         font-size: 2;
     }
+
+    .PRODUCTOS .buzo{
+
+        width:45%;
+        justify-content: space-evenly;
+        margin-left: 0%;
+        margin-right: 0%;        
+        
+    }
+
 
 }
 
 
 @media (min-width : 744px) {
 
+    .PRODUCTOS .colecciones .coleccion {
+        height: 60vh;
+    }
+
     .PRODUCTOS .colecciones .coleccion .glitch {
-        font-size: 3rem;
+        font-size: 2.5rem;
+    }
+
+    .PRODUCTOS .container .h2 {
+       
+        text-align: left;
+        
+        font-size: 2.5rem;
+    }
+
+    .PRODUCTOS .buzo{
+
+        width:30%;
+        justify-content: space-evenly;
+                
+        
     }
 
 }
@@ -74,7 +139,22 @@
 
 @media (min-width : 1080px ) {
 
+    .PRODUCTOS .colecciones .coleccion {
+        height: 85vh;
+    }
+
     .PRODUCTOS .colecciones .coleccion .glitch {
         font-size: 4rem;
+    }
+
+    .PRODUCTOS .buzo{
+
+        width:23%;
+        
+        margin-left: 0;
+        margin-right: 0;
+     
+                
+        
     }
 }

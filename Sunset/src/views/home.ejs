@@ -5,7 +5,7 @@
 }) %> 
 <body>
     <%- include('./partials/header') %> 
-    <body>
+    <main class="home">
        
         <div class="banner"> 
             
@@ -61,21 +61,25 @@
 
         <section class="Mas__vendidos">
 
-            <div class="buzo">
-                <div class="img-container">
-                 <a href="/products/detail"><img src="/images/Buzos/buzo1.jpg" alt="producto 1"></a> 
-                  <span class="price">$3999</span>
-                  </span>
-                  <p>Hoddie Sunset Griego</p>
+            <% for( let i = 0; i <= 3; i++ ) { %>
+            
+                <div class="buzo">
+                    <div class="img-container">
+                     <a href="/products/detail/<%=products[i].id%> "><img src="/images/Buzos/<%=products[i].image%>" alt="producto 1"></a> 
+                      <span class="price">$<%= products[i].price %> </span>
+                      </span>
+                      <p><%= products[i].name %> </p>
+                    </div>
+                    <div class="carrito">
+        
+                        <a href="#">Añadir al carrito</a>
+        
+                    </div>
                 </div>
-                <div class="carrito">
-    
-                    <a href="#">Añadir al carrito</a>
-    
-                </div>
-            </div>
+            <% } %>
+
                 
-            <div class="buzo">
+            <!-- <div class="buzo">
                 <div class="img-container">
                     <a href="/products/detail"> <img src="/images/Buzos/buzoHell1.jpg" alt="producto 2"> </a>
                   <span class="price">$3999</span>
@@ -117,10 +121,10 @@
                 </div>
             </div>
         
-        
+         -->
         
         </section>
-        
+    </main>
         <%- include('./partials/footer') %> 
     
 </body>

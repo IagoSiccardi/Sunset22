@@ -18,6 +18,8 @@ module.exports = {
     },
 
     productos: (req,res) => {
-        res.render ('./products/productos')
+        res.render ('./products/productos',{
+            products
+        })
     }
 }

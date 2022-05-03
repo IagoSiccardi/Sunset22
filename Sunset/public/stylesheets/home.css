@@ -29,7 +29,7 @@
 }
 
 
-body .banner {
+.home .banner {
    /*  display: flex;
     flex-wrap: wrap;
     justify-content: space-between; */
@@ -38,7 +38,7 @@ body .banner {
     
 }
 
-body .banner .sunset{
+.home .banner .sunset{
     
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ body .banner .sunset{
 
 
 
-body .banner .sunset .vesti{
+.home .banner .sunset .vesti{
     font-family: 'Poiret One';
     text-transform: uppercase;
     font-size: 2.5rem;
@@ -64,7 +64,7 @@ body .banner .sunset .vesti{
     top: -40px;
 }
 
-body .banner .sunset .sunsetSpan {
+.home .banner .sunset .sunsetSpan {
     font-family: 'Archivo Black';
     font-size: 3rem;
     color: var(--Naranja);
@@ -76,7 +76,7 @@ body .banner .sunset .sunsetSpan {
 
 
 
-body .banner .imagen {
+.home .banner .imagen {
     background-image: url(/images/buzoBanner.png);
     
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@ body .banner .imagen {
     
 }
 
-body .banner .bajar {
+.home .banner .bajar {
     display: none;
     position: absolute;
     top: 80vh;
@@ -101,14 +101,14 @@ body .banner .bajar {
 
 
 
-body .banner .bajar:hover {
+.home .banner .bajar:hover {
     color: var(--NaranjaHeader);
     transform: translateY(10px);
 }
 
 
 
-body .colecciones {
+.home .colecciones {
     display: block;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -117,7 +117,7 @@ body .colecciones {
     margin-right: 5%;
 }
 
-body .colecciones .coleccion {
+.home .colecciones .coleccion {
     margin: 10px 0;
     position: relative;
     overflow: hidden;
@@ -130,7 +130,7 @@ body .colecciones .coleccion {
 }
 
 
-body .colecciones .coleccion img {
+.home .colecciones .coleccion img {
     width: 100%;
     height: 100%;
     transition: all 0.5s;
@@ -140,13 +140,13 @@ body .colecciones .coleccion img {
 }
 
 
-body .colecciones .coleccion img:hover {
+.home .colecciones .coleccion img:hover {
     transform: scale(1.3);
 }
 
 
 
-body .colecciones .coleccion .coleccionNombre {
+.home .colecciones .coleccion .coleccionNombre {
     text-align: center;
     position: absolute;
     top: 50%;
@@ -156,7 +156,7 @@ body .colecciones .coleccion .coleccionNombre {
     
 }
 
-body .colecciones .coleccion .glitch {
+.home .colecciones .coleccion .glitch {
     
     color: rgb(255, 255, 255, 0.9);
     font-family: "Cinzel";
@@ -166,19 +166,19 @@ body .colecciones .coleccion .glitch {
 }
 
   
-body .colecciones .coleccion .glitch:hover {
+.home .colecciones .coleccion .glitch:hover {
     transform: scale(1.5);
    
 }
 
-body .h2 {
+.home .h2 {
     margin: 70px 0 40px ;
     text-align: center;
 }
 
 
 
-body .buzo {
+ .buzo {
     
         margin-left: 5%;
         margin-right: 5%;
@@ -189,14 +189,18 @@ body .buzo {
         
 }
 
-body .buzo .img-container:hover {
+
+
+
+
+  .buzo .img-container:hover {
     transform: scale(1.1) ;
    
     
     
 }
 
-body .buzo img { 
+.buzo img { 
     
     cursor: pointer;
     margin-bottom: 0;
@@ -277,7 +281,7 @@ body .buzo img {
 
 
 
-    body .banner .sunset .vesti{
+    .home .banner .sunset .vesti{
        
         font-size: 4.5rem;
         padding: 0;
@@ -286,7 +290,7 @@ body .buzo img {
         top: -40px;
     }
     
-    body .banner .sunset .sunsetSpan {
+    .home .banner .sunset .sunsetSpan {
         font-family: 'Archivo Black';
         font-size: 5rem;
         color: var(--Naranja);
@@ -295,13 +299,13 @@ body .buzo img {
     
 
 
-    body .colecciones {
+    .home .colecciones {
         display: flex;
         
         
     }
     
-    body .colecciones .coleccion {
+    .home .colecciones .coleccion {
         width: 45%;
         
         
@@ -311,7 +315,7 @@ body .buzo img {
 
 
 
-    body .buzo{
+    .home .buzo{
 
         width:40%;
         margin-left: 0%;
@@ -321,7 +325,7 @@ body .buzo img {
 
     
 
-    body .Mas__vendidos {
+    .home .Mas__vendidos {
         display: flex;
         flex-wrap:wrap;
         justify-content: space-evenly;
@@ -330,7 +334,7 @@ body .buzo img {
 
 
     
-    body .colecciones .coleccion .glitch {
+    .home .colecciones .coleccion .glitch {
         font-size: 1.5rem;
     }
 
@@ -339,7 +343,7 @@ body .buzo img {
 
 @media (min-width : 744px) {
 
-    body .banner {
+    .home .banner {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -348,7 +352,7 @@ body .buzo img {
         
     }
     
-    body .banner .sunset{
+    .home .banner .sunset{
         width: 30%;
         position: relative;
         display: flex;
@@ -362,13 +366,13 @@ body .buzo img {
     
     
     
-    body .banner .sunset .vesti{
+    .home .banner .sunset .vesti{
         position: relative;
         font-size: 5rem;
         
     }
     
-    body .banner .sunset .sunsetSpan {
+    .home .banner .sunset .sunsetSpan {
         position: relative;
         font-size: 6rem;
         
@@ -377,7 +381,7 @@ body .buzo img {
     
     
     
-    body .banner .imagen {
+    .home .banner .imagen {
         
         width: 60%;
         background-size: 65vh;
@@ -386,18 +390,18 @@ body .buzo img {
         
     }
 
-    body .banner .bajar {
+    .home .banner .bajar {
         display: block;
     }
 
 
-    body .colecciones .coleccion {
+    .home .colecciones .coleccion {
         width: 49%;
         height: 90vh;
     }
 
 
-    body .colecciones .coleccion .glitch {
+    .home .colecciones .coleccion .glitch {
         font-size: 3rem;
     }
 
@@ -407,20 +411,20 @@ body .buzo img {
 
 @media (min-width : 1080px ) {
 
-    body .banner .sunset{
+    .home .banner .sunset{
         width: 40%;
         
     }
     
     
     
-    body .banner .sunset .vesti{
+    .home .banner .sunset .vesti{
         
         font-size: 8rem;
         
     }
     
-    body .banner .sunset .sunsetSpan {
+    .home .banner .sunset .sunsetSpan {
         
         font-size: 9rem;
         
@@ -429,20 +433,20 @@ body .buzo img {
     
     
     
-    body .banner .imagen {
+    .home .banner .imagen {
         width: 50%;
        
         
     }
 
-    body .colecciones .coleccion {
+    .home .colecciones .coleccion {
         width: 45%;
         
     }
 
 
 
-    body .buzo{
+    .home .buzo{
 
         width:23%;
         
@@ -453,11 +457,11 @@ body .buzo img {
         
     }
 
-    body .buzo:nth-child(3){
+    .home .buzo:nth-child(3){
         display: none;
     }
 
-    body .colecciones .coleccion .glitch {
+    .home .colecciones .coleccion .glitch {
         font-size: 4rem;
     }
 }
