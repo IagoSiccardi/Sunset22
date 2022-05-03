@@ -1,0 +1,44 @@
+[
+    {   
+        "id" : 1,
+        "name" : "Hoddie Sunset Griego",
+        "price" : 3999,
+        "colecction" : "Heaven",
+        "image" : "buzo1.jpg"
+
+    },
+    {
+        "id" : 2,
+        "name" : "Hoddie Sunset Koi",
+        "price" : 3999,
+        "colecction" : "Heaven",
+        "image" : "buzo2.jpg"
+
+    },
+    {
+        "id" : 3,
+        "name" : "Hoddie Sunset Dog",
+        "price" : 3999,
+        "colecction" : "Heaven",
+        "image" : "buzo3.jpg"
+
+    },
+    {
+        "id" : 4,
+        "name" : "Hoddie Sunset Hell Snake",
+        "price" : 3999,
+        "colecction" : "Hell",
+        "image" : "buzoHell1.jpg"
+
+    },
+    {
+        "id" : 5,
+        "name" : "Hoddie Sunset Hell Diablo",
+        "price" : 3999,
+        "colecction" : "Heaven",
+        "image" : "buzoHell2.jpg"
+
+    }
+    
+
+]
