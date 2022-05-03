@@ -12,8 +12,13 @@ header section {
     
 }
 
+header section .logo {
+    width: 33%;
+}
+
 header section ul {
     display: none;
+    width: 33%;
     
 }
 
@@ -48,11 +53,45 @@ header section .paginas li:hover {
 
 header section .iconos {
     display: none;
+    text-align: right;
     
-    text-align: center;
+    
+}
+
+header .iconos form {
+    display: none;
+    position: relative;
+    
+}
+
+header .iconos form input {
+    width: 15vw;
+    padding:10px;
+    padding-left: 15px;
+    border-radius: 25px;
+    border: none;
+}
+
+header .iconos form button{
+    position: absolute;
+    font-size: 16px;
+    top: 11px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s;
+
+
+}
+
+header .iconos form button:hover {
+    
+    transform:scale(1.2);
 }
 
 header .iconos li  {
+    text-align: center;
     background-color: white;
     border-radius: 40px;
     width: 40px;
@@ -64,21 +103,21 @@ header .iconos li:hover {
     transform: scale(1.2);
 }
 
-body header .logo:hover{
+body header .logo img:hover{
     
     transform: scale(1.2);
     
 }
 
-body header .logo {
 
-    transition: all 0.5s;
-}
+
+    
+
 
 
 body header .logo img{
     
-    
+    transition: all 0.5s;
     width: 170px;
     padding: 10px;
     margin-left: 20px;
@@ -133,6 +172,7 @@ body header .iconos li a i {
 
     header section .iconos {
         display: flex;
+        justify-content: center;
         font-size: 25px;
         gap:1rem;
         
@@ -161,7 +201,22 @@ body header .iconos li a i {
         display: none;
     } 
 
+  
+
     header section .iconos {
-        margin-right: 25px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20px;
+       
+        
     }
+}
+
+@media (min-width : 1080px) {
+
+    header section .iconos form{
+        display: block;
+        
+    }
+
 }
