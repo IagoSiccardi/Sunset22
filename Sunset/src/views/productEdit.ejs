@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head',{
+        title: 'Sunset | Edit'
+    }) %> 
+<body>
+    <%- include('./partials/header') %> 
+    <main class="formularios">
+
+        <section>
+            <h2> Editar producto</h2>
+            <form action="">
+                <div>
+                    <label>
+                        <span>Nombre del producto</span>
+                        <input type="text" name="name" autocomplete="off" required>
+
+                    </label>
+
+                </div>
+                <div>
+                    <label>
+                        <span>Precio del producto</span>
+                        <input type="number" name="price" autocomplete="off" required>
+
+                    </label>
+
+                </div>
+                
+                
+                <div>
+                    <input type="file" name="imagen" id="imagen">
+                </div>
+                
+                <div>
+
+                    <select name="coleccion" id="coleccion">
+                        
+    
+                            <option value="" hidden selected>Eliga la coleccion</option>
+                            
+                             <option value="">Heaven</option>
+                             <option value="">Hell</option>
+    
+                    </select>
+                </div>
+            </form>
+        </section>
+        
+    </main>
+    <%- include('./partials/footer') %> 
+</body>
+</html>

@@ -16,6 +16,8 @@ for (let i = 0; i < 1; i++) {
 
 }
 
+
+
 console.log(result)
 
 
@@ -68,5 +70,13 @@ module.exports = {
         res.render ('./products/productos',{
             products
         })
+    },
+
+    add: (req,res) => {
+        res.render('productAdd')
+    },
+
+    edit: (req,res) => {
+        res.render('productEdit')
     }
 }

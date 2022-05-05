@@ -44,6 +44,21 @@
     
 }
 
+.formularios #coleccion {
+    width: 75%;
+    padding: 10px 0;
+    
+    
+}
+.formularios #imagen {
+    width: 75%;
+    padding: 10px 0;
+    padding-left: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    
+}
+
 .formularios section .terminos {
     margin-top: 20px;
     margin-bottom: 10px;
