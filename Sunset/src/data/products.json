@@ -25,7 +25,7 @@
     },
     {
         "id" : 4,
-        "name" : "Hoddie Sunset Hell Snake",
+        "name" : "Hoddie Sunset Snake",
         "price" : 3999,
         "colecction" : "Hell",
         "image" : "buzoHell1.jpg"
@@ -33,10 +33,42 @@
     },
     {
         "id" : 5,
-        "name" : "Hoddie Sunset Hell Diablo",
+        "name" : "Hoddie Sunset Diablo",
+        "price" : 3999,
+        "colecction" : "Hell",
+        "image" : "buzoHell2.jpg"
+
+    },
+    {
+        "id" : 6,
+        "name" : "Hoddie Sunset Metamorfosis",
+        "price" : 3999,
+        "colecction" : "Hell",
+        "image" : "buzoHell3.jpg"
+
+    },
+    {
+        "id" : 7,
+        "name" : "Hoddie Sunset butterfly",
+        "price" : 3999,
+        "colecction" : "Hell",
+        "image" : "buzoHell4.jpg"
+
+    },
+    {
+        "id" : 8,
+        "name" : "Hoddie Sunset NotSunset",
         "price" : 3999,
         "colecction" : "Heaven",
-        "image" : "buzoHell2.jpg"
+        "image" : "buzo4.jpg"
+
+    },
+    {
+        "id" : 9,
+        "name" : "Hoddie Sunset Sunflower",
+        "price" : 3999,
+        "colecction" : "Heaven",
+        "image" : "buzo5.jpg"
 
     }
     
