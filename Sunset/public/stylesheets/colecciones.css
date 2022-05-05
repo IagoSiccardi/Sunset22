@@ -1,0 +1,166 @@
+
+
+
+.COLECCIONES .coleccion {
+    
+    
+    margin-top: 25px;
+    text-align: right;
+    width: 100%;
+    height: 20vh;
+    position: relative;
+}
+
+.COLECCIONES .coleccion img{
+    width: 100%;
+    height: 20vh;
+    border-radius: 25px;
+    filter: drop-shadow(2px 4px 6px black)
+    
+    
+}
+
+
+
+.COLECCIONES .coleccion .title {
+    
+    width: 100%;
+    position: absolute;
+    
+    top: calc(50% - 1.5rem);
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    margin: auto;
+
+
+}
+
+.COLECCIONES .coleccion .title p {
+    font-family: "Cinzel";
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+
+
+.COLECCIONES .container {
+    margin-top: 20px;
+}
+
+.COLECCIONES .container .h2 {
+    text-align: left;
+    margin: 20px 10px 0px;
+}
+
+.COLECCIONES .container .buzo{
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.COLECCIONES .container .buzo .img-container {
+    width: 100%;
+}
+
+
+.COLECCIONES .container .verMas {
+    width: 100%;
+    text-align: center;
+    color: #000;
+    margin: 40px 0px;
+    transition: 0.5s;
+}
+
+.COLECCIONES .container .verMas:hover {
+    transform: scale(1.1);
+}
+
+.COLECCIONES .container .verMas p {
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+
+@media (min-width : 500px) {
+
+    .COLECCIONES .coleccion .title {        
+        top: calc(50% - 2rem);
+    }
+    
+    .COLECCIONES .coleccion .title p {
+        font-size: 4rem;
+    }
+    
+    
+    .COLECCIONES .container .buzo{
+    
+        width:45%;
+        margin-left: 0%;
+        margin-right: 0%;        
+        
+    }
+    
+    
+    
+    .COLECCIONES .container {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: flex-start;
+        gap: 10%;
+        
+    }
+
+   
+}
+
+@media (min-width : 744px) {
+
+
+    .COLECCIONES .coleccion .title {        
+        top: calc(50% - 2.5rem);
+    }
+    
+    .COLECCIONES .coleccion .title p {
+        font-size: 5rem;
+    }
+    
+    
+
+    .COLECCIONES .container .buzo{
+    
+        width:30%;
+            
+        
+    }
+
+    .COLECCIONES .container {
+        
+        gap: 5%;
+        
+    }
+}
+
+
+@media (min-width : 1080px) {
+
+    .COLECCIONES .coleccion .title {        
+        top: calc(50% - 3rem);
+    }
+    
+    .COLECCIONES .coleccion .title p {
+        font-size: 6rem;
+    }
+
+    .COLECCIONES .container .buzo{
+       width:20%;    
+    }
+
+
+    .COLECCIONES .container {
+        gap: 6%;
+    }
+} 
+    
+

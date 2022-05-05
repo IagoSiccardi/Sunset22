@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('../partials/head',{
+        title: 'Sunset | Colecciones'
+    }) %> 
+<body>
+    <%- include('../partials/header') %> 
+
+    <main class="PRODUCTOS COLECCIONES">
+
+
+        <section class="coleccion">
+
+            <% if (colections == "Heaven") { %>
+                <img src="/images/heavenCollection.jpeg" alt="">
+                <div class="title">
+                    <p>Heaven</p>
+                </div>
+            <% } else { %>
+                <img src="/images/hellCollection.jpeg" alt="">
+                <div class="title">
+                    <p>Hell</p>
+            <% } %>
+
+
+           
+
+        </section>
+            <section class="container">
+
+            <h2 class="h2">Productos</h2>
+
+                <% for( let i = 0; i < resultado.length; i++ ) { %>
+            
+                    <div class="buzo">
+                        <div class="img-container">
+                         <a href="/products/detail/<%=resultado[i].id%> "><img src="/images/Buzos/<%=resultado[i].image%>" alt="producto 1"></a> 
+                          <span class="price">$<%= resultado[i].price %> </span>
+                          </span>
+                          <p><%= resultado[i].name %> </p>
+                        </div>
+                    </div>
+                <% } %>
+
+            <a class="verMas" href="/products"><p>Ver todos los productos</p></a>
+            
+            </section>
+        </main>  
+        <%- include('../partials/footer') %> 
+</body>
+</html>
