@@ -73,10 +73,16 @@ module.exports = {
     },
 
     add: (req,res) => {
-        res.render('productAdd')
+        res.render('productAdd',{
+            products
+        })
     },
 
     edit: (req,res) => {
-        res.render('productEdit')
+
+
+        res.render('productEdit',{
+            products
+        })
     }
 }
