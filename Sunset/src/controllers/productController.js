@@ -1,5 +1,6 @@
 const products = require ('../data/products.json')
 
+
 const getRandom = (min, max) => {
 
     return Math.round( Math.random() * (max - min) + min)
@@ -17,18 +18,10 @@ for (let i = 0; i < 1; i++) {
 }
 
 
-
-console.log(result)
-
-
-
-
-  
-
 module.exports = {
     productCart: (req,res) => {
         
-        res.render ('./products/productCart')
+        return res.render ('./products/productCart')
     },
     
     productDetail: (req,res) => {
@@ -36,7 +29,7 @@ module.exports = {
         const {id} = req.params
         const product = products.find(product => product.id == +id)
         
-        res.render ('./products/productDetail',{
+        return res.render ('./products/productDetail',{
             product,
             products,
             result
@@ -56,7 +49,7 @@ module.exports = {
 
        
 
-        res.render('./products/colecciones',{
+        return res.render('./products/colecciones',{
             products,
             colecction,
             colections,
@@ -67,13 +60,13 @@ module.exports = {
     },
 
     productos: (req,res) => {
-        res.render ('./products/productos',{
+        return res.render ('./products/productos',{
             products
         })
     },
 
     add: (req,res) => {
-        res.render('productAdd',{
+        return res.render('productAdd',{
             products
         })
     },
@@ -81,7 +74,7 @@ module.exports = {
     edit: (req,res) => {
 
 
-        res.render('productEdit',{
+        return res.render('productEdit',{
             products
         })
     }

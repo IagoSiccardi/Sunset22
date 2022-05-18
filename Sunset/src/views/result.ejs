@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head',{
+        title: 'Sunset | Resultados'
+    }) %> 
+<body>
+    <%- include('./partials/header') %> 
+
+    <main class="PRODUCTOS RESULT">
+    
+            
+            
+            <section class="container">
+
+            <h2 class="h2"> Resultados a : <%= keyword %> </h2>
+
+            
+            <% productsFilter.forEach(({id, name, price, image, colecction }) => { %>
+                
+                <div class="buzo">
+                    <div class="img-container">
+                     <a href="/products/detail/<%= id %> "><img src="/images/Buzos/<%= image %>  " alt="producto 1"></a> 
+                      <span class="price">$<%= price %>  </span>
+                      </span>
+                      <p><%= name %>  </p>
+                    </div>
+                </div>
+
+            <% }) %>
+            
+                
+            </section>
+        </main>  
+        <%- include('./partials/footer') %> 
+</body>
+</html>
