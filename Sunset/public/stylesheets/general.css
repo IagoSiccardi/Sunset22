@@ -7,6 +7,20 @@
     
 }
 
+html {
+    scroll-behavior: smooth;
+    position: relative;
+    padding-bottom: 390px ;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+  }
+
 
 ::placeholder { 
     
@@ -14,12 +28,10 @@
     font-weight: 400;
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 body {
     background-color: transparent;
+   
 }
 
 body::-webkit-scrollbar {

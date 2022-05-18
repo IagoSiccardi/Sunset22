@@ -12,23 +12,36 @@
             
             <section class="container">
 
-            <h2 class="h2"> Resultados a : <%= keyword %> </h2>
+             <% if (productsFilter.length > 0) { %>
 
-            
-            <% productsFilter.forEach(({id, name, price, image, colecction }) => { %>
+                <h2 class="h2"> Resultados a : <span class="keywordSpan"><%= keyword %></span></h2>
                 
-                <div class="buzo">
-                    <div class="img-container">
-                     <a href="/products/detail/<%= id %> "><img src="/images/Buzos/<%= image %>  " alt="producto 1"></a> 
-                      <span class="price">$<%= price %>  </span>
-                      </span>
-                      <p><%= name %>  </p>
+                <% productsFilter.forEach(({id, name, price, image, colecction }) => { %>
+                    
+                    <div class="buzo">
+                        <div class="img-container">
+                         <a href="/products/detail/<%= id %> "><img src="/images/Buzos/<%= image %>  " alt="producto 1"></a> 
+                          <span class="price">$<%= price %>  </span>
+                          </span>
+                          <p><%= name %>  </p>
+                        </div>
                     </div>
+    
+                <% }) %>
+
+             <% } else { %> 
+
+                <div class="divResult">
+
+                    <h2 class="h2result"> No encontramos resultados para : <span class="keywordSpan"><%= keyword %></span></h2>
+    
+                    <a href="/"> Volver al inicio</a>
+
                 </div>
 
-            <% }) %>
+
+             <% } %>
             
-                
             </section>
         </main>  
         <%- include('./partials/footer') %> 
