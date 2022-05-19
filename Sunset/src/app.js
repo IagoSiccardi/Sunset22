@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override')
 
 var mainRouter = require('./routes/main');
 var usersRouter = require('./routes/users');
@@ -20,28 +21,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(methodOverride('_method'))
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/products', productRouter)
 app.use('*', errorRouter)
-
-/* app.get('/',(req,res) => res.sendFile(path.join(__dirname,'views','index.html')))
-
-app.get('/login',(req,res) => res.sendFile(path.join(__dirname,'views','login.html')))
-
-app.get('/product-cart',(req,res) => res.sendFile(path.join(__dirname,'views','productCart.html')))
-
-app.get('/product-detail',(req,res) => res.sendFile(path.join(__dirname,'views','productDetail.html')))
-
-app.get('/register',(req,res) => res.sendFile(path.join(__dirname,'views','register.html')))
-
-app.get('/productos',(req,res) => res.sendFile(path.join(__dirname,'views','productos.html')))
-
-app.get('/nosotros',(req,res) => res.sendFile(path.join(__dirname,'views','nosotros.html')))
-
-app.get('*',(req,res) => res.sendFile(path.join(__dirname,'views','error404.html'))) */
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

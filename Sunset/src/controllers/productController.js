@@ -64,7 +64,7 @@ module.exports = {
 
     productos: (req,res) => {
 
-       JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')))
+       const products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')))
 
         return res.render ('./products/productos',{
             products
@@ -102,9 +102,40 @@ module.exports = {
 
     edit: (req,res) => {
 
+        const {id} = req.params
+
+        const product = products.find(product => product.id == +id)
 
         return res.render('./products/productEdit',{
-            products
+            product
         })
+    },
+    update: (req,res) => {
+
+        const {id} = req.params
+
+        const{name,price,coleccion} = req.body
+        
+        const productsEdit = products.map(product => {
+
+        if (product.id === +id) {
+
+            let productEdit = {
+                id: +id,
+                name : name.trim(),
+                price: +price,
+                colecction: coleccion,
+                image : 'default-img.png'
+            }
+            return productEdit
+        }   
+        
+            return product
+
+        })
+
+        fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsEdit,null,3),'utf-8')
+
+        res.redirect('/products')
     }
 }

@@ -1,1 +1,0 @@
--Las vistas para agregar y editar productos estan en /products/add y /products/edit

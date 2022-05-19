@@ -29,6 +29,10 @@
 }
 
 
+.homeHTML {
+    padding-bottom: 250px ;
+}
+
 .home .banner {
    /*  display: flex;
     flex-wrap: wrap;
