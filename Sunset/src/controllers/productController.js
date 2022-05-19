@@ -1,3 +1,6 @@
+const path = require ('path')
+const fs = require('fs')
+
 const products = require ('../data/products.json')
 
 
@@ -60,21 +63,47 @@ module.exports = {
     },
 
     productos: (req,res) => {
+
+       JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')))
+
         return res.render ('./products/productos',{
             products
         })
     },
 
     add: (req,res) => {
-        return res.render('productAdd',{
+        return res.render('./products/productAdd',{
             products
         })
+    },
+
+    store: (req,res) => {
+        const {name,price,coleccion} = req.body
+
+        const lastId = products[products.length -1 ].id + 1
+
+        const newProduct = {
+            
+            id: lastId,
+            name: name.trim(),
+            price: +price,
+            colecction : coleccion,
+            image: 'default-img.png'
+        }
+
+        products.push(newProduct)
+
+        fs.writeFileSync(path.resolve(__dirname,'..', 'data', 'products.json'), JSON.stringify(products,null,3),'utf-8')
+
+        res.redirect('/products')
+
+
     },
 
     edit: (req,res) => {
 
 
-        return res.render('productEdit',{
+        return res.render('./products/productEdit',{
             products
         })
     }

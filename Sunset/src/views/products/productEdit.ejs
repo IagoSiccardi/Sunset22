@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="formulariosHTML">
     <%- include('./partials/head',{
         title: 'Sunset | Edit'
     }) %> 
@@ -34,14 +34,19 @@
     
                             <option value="" hidden selected>Eliga la coleccion</option>
                             
-                             <option value="">Heaven</option>
-                             <option value="">Hell</option>
+                             <option value="Heaven">Heaven</option>
+                             <option value="Hell">Hell</option>
     
                     </select>
                 </div>
                 
                 <div>
                     <input type="file" name="imagen" id="imagen">
+                </div>
+
+                <div>
+                    
+                    <button class="loginButton" type="submit">Crear</button>
                 </div>
                 
             </form>

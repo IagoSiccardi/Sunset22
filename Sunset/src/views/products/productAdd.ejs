@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-    <%- include('./partials/head',{
+<html lang="en" class="formulariosHTML">
+    <%- include('../partials/head',{
         title: 'Sunset | Add'
     }) %> 
 <body>
-    <%- include('./partials/header') %> 
+    <%- include('../partials/header') %> 
     <main class="formularios">
 
         <section>
             <h2> Agregar producto</h2>
-            <form action="">
+            <form method="post">
                 <div>
                     <label>
                         <span>Nombre del producto</span>
@@ -21,7 +21,7 @@
                 <div>
                     <label>
                         <span>Precio del producto</span>
-                        <input type="number" name="price" autocomplete="off" required>
+                        <input type="number" name="price" autocomplete="off" required >
 
                     </label>
 
@@ -33,8 +33,8 @@
     
                             <option value="" hidden selected>Eliga la coleccion</option>
                             
-                             <option value="">Heaven</option>
-                             <option value="">Hell</option>
+                             <option value="Heaven">Heaven</option>
+                             <option value="Hell">Hell</option>
     
                     </select>
 
@@ -43,11 +43,17 @@
                 <div>
                     <input type="file" name="imagen" id="imagen">
                 </div>
+
+                <div>
+                    
+                    <button class="loginButton" type="submit">Crear</button>
+                </div>
+
                 
             </form>
         </section>
         
     </main>
-    <%- include('./partials/footer') %> 
+    <%- include('../partials/footer') %> 
 </body>
 </html>
