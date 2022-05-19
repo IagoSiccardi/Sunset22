@@ -61,12 +61,5 @@
       "price": 3999,
       "colecction": "Heaven",
       "image": "buzo5.jpg"
-   },
-   {
-      "id": 10,
-      "name": "Hoddie Sunset ASHE",
-      "price": 3999,
-      "colecction": "Heaven",
-      "image": "default-img.png"
    }
 ]

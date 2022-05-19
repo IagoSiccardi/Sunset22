@@ -43,9 +43,28 @@
                 </div>
     
                 <div class="botones">
-                    <a href="#">Añadir al carrito <i class="fas fa-shopping-cart"></i></a>
-                    <a href="/products/edit/<%= product.id %> ">Añadir a favoritos <i class="fas fa-heart"></i></a>
+                    
+                    <a href="" class="cartFav">Añadir al carrito <i class="fas fa-shopping-cart"></i></a>
+            
+                    <a href="" class="cartFav">Añadir a favoritos <i class="fas fa-heart"></i></a>
+
+                    
+                    
+                    <div class="formEdit">
+
+                        
+                        <a href="/products/edit/<%= product.id %> " class="editDelete">Editar <i class="fas fa-heart"></i></a>
+                        
+                        <form action="/products/remove/<%=product.id%>?_method=DELETE" method="post" class="deleteForm">
+                            
+                            <a href="" class="editDelete"><button type="submit">Eliminar<i class="fas fa-trash"></i> </button></a>
+                        </form>
+                        
+                    </div>
+                    
+                    
                 </div>
+
             </aside>
         </section>
         <div class="h3">

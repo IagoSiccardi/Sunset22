@@ -137,5 +137,19 @@ module.exports = {
         fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsEdit,null,3),'utf-8')
 
         res.redirect('/products')
+    },
+
+    remove:(req,res) => {
+
+        const {id} = req.params
+
+    
+        const productsEdit = products.filter(product => product.id !== +id)
+
+        fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsEdit,null,3),'utf-8')
+
+        res.redirect('/products')
+
+
     }
 }
