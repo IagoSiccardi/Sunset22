@@ -61,5 +61,12 @@
       "price": 3999,
       "colecction": "Heaven",
       "image": "buzo5.jpg"
+   },
+   {
+      "id": 10,
+      "name": "134",
+      "price": 134,
+      "colecction": "Hell",
+      "image": "img-1653014048038.png"
    }
 ]

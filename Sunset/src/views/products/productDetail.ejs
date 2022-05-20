@@ -72,31 +72,19 @@
         </div>
         <section class="puedeInteresarte">
 
-            <article class="buzo">
-                <div class="img-container">
-                    <a href="/products/detail/<%= products[result[0]].id %> "> <img src="/images/Buzos/<%= products[result[0]].image %> " alt="producto 1"> </a>
-                  <span class="price">$<%= products[result[0]].price %></span>
-                  </span>
-                  <p><%= products[result[0]].name %> </p>
-                </div>
-            </article>
+            <% for( let i = 0; i < 3; i++ ) { %>
+            
+                <article class="buzo">
+                    <div class="img-container">
+                        <a href="/products/detail/<%= products[i].id %> "> <img src="/images/Buzos/<%= products[i].image %> " alt="producto 1"> </a>
+                      <span class="price">$<%= products[i].price %></span>
+                      </span>
+                      <p><%= products[i].name %> </p>
+                    </div>
+                </article>
+            <% } %> 
+
         
-            <article class="buzo">
-                <div class="img-container">
-                    <a href="/products/detail/<%= products[result[1]].id %> "> <img src="/images/Buzos/<%= products[result[1]].image %> " alt="producto 1"> </a>
-                  <span class="price">$<%= products[result[1]].price %></span>
-                  </span>
-                  <p><%= products[result[1]].name %> </p>
-                </div>
-            </article>
-            <article class="buzo">
-                <div class="img-container">
-                    <a href="/products/detail/<%= products[result[2]].id %> "> <img src="/images/Buzos/<%= products[result[2]].image %> " alt="producto 1"> </a>
-                  <span class="price">$<%= products[result[2]].price %></span>
-                  </span>
-                  <p><%= products[result[2]].name %> </p>
-                </div>
-            </article>
         </section>
     </main>
     <%- include('../partials/footer') %> 

@@ -88,7 +88,7 @@ module.exports = {
             name: name.trim(),
             price: +price,
             colecction : coleccion,
-            image: 'default-img.png'
+            image: req.file ? req.file.filename  : 'default-img.png'
         }
 
         products.push(newProduct)
@@ -125,8 +125,15 @@ module.exports = {
                 name : name.trim(),
                 price: +price,
                 colecction: coleccion,
-                image : 'default-img.png'
+                image : req.file ? req.file.filename  : 'default-img.png'
             }
+
+            if(req.file){
+                if(fs.existsSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image)) && product.image !== 'default-img.png'){
+                    fs.unlinkSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image))
+                }
+            }
+
             return productEdit
         }   
         
@@ -147,6 +154,13 @@ module.exports = {
         const productsEdit = products.filter(product => product.id !== +id)
 
         fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsEdit,null,3),'utf-8')
+
+        if(req.file){
+            if(fs.existsSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image)) && product.image !== 'default-img.png'){
+                fs.unlinkSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image))
+            }
+        }
+
 
         res.redirect('/products')
 
