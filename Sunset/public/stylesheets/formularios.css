@@ -1,5 +1,5 @@
 .formulariosHTML {
-    padding-bottom: 195px;
+    padding-bottom: 165px;
 }
 
 
@@ -25,14 +25,16 @@
 
 
 .formularios section h2 {
-    margin-bottom: 10px;
+    margin-top:20px ;
+    margin-bottom: 0px;
     text-align: center;
+    padding-left: 20px;
     font-size: 1.5rem;
     font-weight: 500;
     font-family: 'Roboto';
 }
 
-.formularios section p {
+.formularios section .formularioP {
     font-family: 'Roboto';
     font-size: 15px;
     margin-top: 20px;
@@ -68,6 +70,24 @@
     margin-bottom: 10px;
 }
 
+.formularios section .errorForm{
+    width: 75%;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: red;
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 10px 0px;
+
+}
+
+.formularios .terminosP {
+    margin: 0px;
+    font-weight: bold;
+}
+
 .formularios section p a {
     color: rgb(0, 0, 0);
     font-weight: 900;
@@ -83,6 +103,14 @@
     margin:20px 0
     
    
+}
+
+/* .formularios section form div:nth-child(4) {
+    margin: 0px 0px
+} */
+
+.formularios section form div:nth-child(5) {
+    margin: 0px 0px
 }
 
 
@@ -175,6 +203,11 @@
 }
 
 @media (min-width : 500px) {
+
+    .formulariosHTML {
+        padding-bottom: 195px;
+    }
+    
 
     .formularios section form {
         display: flex;

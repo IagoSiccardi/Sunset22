@@ -1,0 +1,16 @@
+[
+   {
+      "id": 1,
+      "name": "iago siccardi",
+      "email": "siccardi@gmail.com",
+      "password": "$2a$10$YecyLmjrstaM2kUsf3j7JOExDHQcJBrQEG1xst.FutAIs.ufqfkE.",
+      "img": "default-img.png"
+   },
+   {
+      "id": 2,
+      "name": "Mati Mateo",
+      "email": "matimateo@gmail.com",
+      "password": "$2a$10$iJGxpn9GGMtKy4zieyWzGe6BW9fQudRxJvAufIs3L1rkxYLw1GJ8u",
+      "img": "default-img.png"
+   }
+]
