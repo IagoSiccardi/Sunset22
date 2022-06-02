@@ -9,22 +9,28 @@
 
         <section>
             <h2>Iniciar Sesión</h2>
-            <form action="">
+            <form method="POST">
                 <div>
                     <label>
-                        <span>Usuario</span>
-                        <input type="email" name="usuario" autocomplete="off" required>
-
+                        <span>Email</span>
+                        <input type="text" name="email" value="<%= locals.old && old.email ? old.email : null %>" >
                     </label>
+                    <% if (locals.errores && errores.email) { %>
+                        <p class="errorForm"> <%= errores.email.msg  %> </p>
+                    <% } %>
 
                 </div>
                 <div>
                     <label>
                         <span>Contraseña</span>
-                        <input type="password" name="password" autocomplete="off" required>
+                        <input type="password" name="password" autocomplete="off" >
 
                     </label>
-                    <p class="formularioP">Recordar contraseña <input type="checkbox" name="" id=""></p>
+                    <% if (locals.errores && errores.password) { %>
+                        <p class="errorForm"> <%= errores.password.msg  %> </p>
+                    <% } %>
+
+                    <p class="formularioP">Recordar contraseña <input type="checkbox" name="recordame" id=""></p>
                     <button class="loginButton" type="submit">Ingresar</button>
                     <p  class="formularioP">¿No tienes cuenta? Registrate <a href="/users/register">aquí</a></p>
                     

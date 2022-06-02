@@ -2,7 +2,12 @@
     <section>
 
         <div class="logo"> <a href="#"><img src="/images/sunsetIconHeader.png" alt=""></a>
-        <a class="usuario" href="/users/login"><i class="fas fa-user"></i>
+            <% if (locals.userLogin) { %>
+                <a class="usuario" href="/users/profile"><i class="fas fa-user"></i>
+            <% }else { %>
+                <a class="usuario" href="/users/login"><i class="fas fa-user"></i>
+                
+            <% } %>
         </div>
        
 

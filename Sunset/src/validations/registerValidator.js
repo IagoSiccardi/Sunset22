@@ -7,7 +7,16 @@ module.exports = [
 
     check('email')
         .notEmpty().withMessage('Debes colocar un email.').bail()
-        .isEmail().withMessage('El mail no es valido.'),
+        .isEmail().withMessage('El email no es valido.').bail()
+        .custom((value) => {
+            const usuario = users.find(usuario => usuario.email === value)
+            if(usuario){
+                return false
+            }
+            else{
+                return true
+            }
+        }).withMessage('Email ya registrado.'),
 
     check('password')
         .notEmpty().withMessage('Debes colocar una contraseña.').bail()

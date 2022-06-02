@@ -68,6 +68,7 @@
 .formularios section .terminos {
     margin-top: 20px;
     margin-bottom: 10px;
+    
 }
 
 .formularios section .errorForm{
@@ -86,6 +87,8 @@
 .formularios .terminosP {
     margin: 0px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
 .formularios section p a {

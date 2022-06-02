@@ -16,7 +16,7 @@
                         <input type="text" name="nombreApellido" autocomplete="off" value="<%= locals.old && old.nombreApellido ? old.nombreApellido : null %>" %> >
                     </label>
                     <% if (locals.errores && errores.nombreApellido) { %>
-                        <p class="errorForm"> <%= locals.errores && errores.nombreApellido ? errores.nombreApellido.msg : null  %> </p>
+                        <p class="errorForm"> <%=errores.nombreApellido.msg%> </p>
 
                     <% } %>
                 </div>
@@ -26,7 +26,7 @@
                         <input type="text" name="email" autocomplete="off" value="<%= locals.old && old.email ? old.email : null %>" >
                     </label>
                     <% if (locals.errores && errores.email) { %>
-                        <p class="errorForm"> <%= locals.errores && errores.email ? errores.email.msg : null  %> </p>
+                        <p class="errorForm"> <%= errores.email.msg  %> </p>
                      
                     <% } %>
 
@@ -39,7 +39,7 @@
                         <input type="password" name="password" autocomplete="off">
                     </label>
                     <% if (locals.errores && errores.password) { %>
-                        <p class="errorForm"> <%= locals.errores && errores.password ? errores.password.msg : null  %> </p>
+                        <p class="errorForm"> <%= errores.password.msg %> </p>
                      
                     <% } %>
                 </div>
@@ -50,7 +50,7 @@
                         <input type="password" name="passwordRepeat" autocomplete="off" >
                     </label>
                     <% if (locals.errores && errores.passwordRepeat) { %>
-                        <p class="errorForm"> <%= locals.errores && errores.passwordRepeat ? errores.passwordRepeat.msg : null  %> </p>
+                        <p class="errorForm"> <%= errores.passwordRepeat.msg  %> </p>
                      
                     <% } %>
                 </div>
@@ -60,7 +60,7 @@
                     <p class="terminosP">Acepto los terminos y condiciones<input type="checkbox" name="terminos" id="" ></p>
                     
                     <% if (locals.errores && errores.terminos) { %>
-                        <p class="errorForm"> <%= locals.errores && errores.terminos ? errores.terminos.msg : null  %> </p>
+                        <p class="errorForm"> <%=errores.terminos.msg %> </p>
                      
                     <% } %>
 
