@@ -1,0 +1,149 @@
+.profileHTML {
+    padding-bottom: 200px;
+}
+
+.profile {
+    margin: 10px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile section {
+    width: 100%;
+    height: 70vh;
+    background-color: #e66413;
+    padding: 10px 0px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    
+}
+
+.profile section article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.profile section .usuarioIMG{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    width: 260px;
+    height: 260px;
+    background: linear-gradient(90deg, rgba(233,110,32,1) 0%, rgba(253,29,29,1) 50%, rgba(255,214,0,1) 100%);
+    border-radius: 50%;
+}
+
+.profile section .usuarioIMG img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.profile .formularioDIV {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0px;
+    
+}
+
+.profile .formularioDIV label {
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.profile .formularioDIV input {
+    width: 100%;
+    display: block;
+    border: 2px solid black;
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 8px 10px;
+    font-size: 18px;
+    font-family: 'AdihausDin';
+    font-weight: 600;
+}
+
+.profile .formularioDIV .labelFile{
+
+    color: var(--Naranja);
+    background-color: black;
+    display: inline-block;
+    transition: .5s;
+    cursor: pointer;
+    padding: 10px 40px ;
+    width: 100%;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+
+
+.profile .formularioDIV .inputFile {
+    width: 25%;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+
+.profile .formularioDIV .inputDisabled {
+    color:rgba(0, 0, 0, 0.5)
+}
+
+.profile .guardar button {
+    background-color: black;
+    padding: 10px 0px;   
+    border-radius: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top:20px ;
+    margin-bottom: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--Naranja)
+}
+
+
+.profile .guardar button:hover {
+    transform: scale(1.05);
+}
+
+
+@media (min-width:500px) {
+    .profile section {
+        width: 450px;
+    }
+
+    .profile .formularioDIV {
+        width: 300px;
+    }
+
+    .profile .guardar {
+        margin-top: 30px;
+    }
+    
+}
+
+
+@media (min-width:744px) {
+    .profile section {
+        width: 550px;
+    }
+
+    .profile .formularioDIV {
+        width: 400px;
+    }
+    
+}

@@ -50,7 +50,44 @@ module.exports = {
     },
 
     profile : (req,res) => {
-    
+
+        const usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','users.json'),'utf-8'))
+
+        let usuario = usuarios.find(usuario => usuario.id === req.session.userLogin.id)
+
+        res.render('./users/profile',{
+            usuario
+        })
+    },
+    uploadProfile : (req,res) => {
+        const {nombreApellido} = req.body
+
+        const {id} = usuarios.find(usuario => usuario.id === req.session.userLogin.id)
+
+        const usersEdit = usuarios.map(usuario => {
+            if (usuario.id === +id){
+                let userEdit = {
+                    ...usuario,
+                    name : nombreApellido.trim(),
+                    img : req.file ? req.file.filename : usuario.img
+                }
+
+                if(req.file){
+                   if( fs.existsSync(path.resolve(__dirname,'..','..','public', 'images', 'users', usuario.img)) && usuario.img !== 'default-img.png'){
+                       fs.unlinkSync(path.resolve(__dirname,'..','..','public', 'images', 'users', usuario.img))
+                   }
+                }
+
+                return userEdit
+            } 
+
+            return usuario
+        })
+
+        fs.writeFileSync(path.resolve(__dirname, '..' , 'data' , 'users.json'),JSON.stringify(usersEdit,null,3),'utf-8')
+
+        res.redirect('/')
+
     },
 
     register: (req,res) => {

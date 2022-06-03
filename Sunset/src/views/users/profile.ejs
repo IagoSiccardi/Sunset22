@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="profileHTML">
+    <%- include('../partials/head',{
+        title: 'Profile | Sunset'
+    }) %> 
+<body>
+    <%- include('../partials/header') %>
+    <main class="profile">
+        <section>
+            <article>
+                <div class="usuarioIMG">
+                    <img src="/images/users/<%= usuario.img %> " alt="">
+                </div>
+                <form method="post" enctype="multipart/form-data">
+
+                    <div class="formularioDIV">
+                        <label for="image" class="labelFile">Cambiar foto</label>
+                        <input type="file" name="image" class="inputFile">
+                    </div>
+
+                    <div class="formularioDIV">
+                        <label for="email">Nombre y apellido</label>
+                        <input type="text" name="nombreApellido" autocomplete="off" value="<%= usuario.name %>">
+                    </div>
+                    <div class="formularioDIV">
+                        <label for="email">Email</label>
+                        <input class="inputDisabled" type="text" name="email" autocomplete="off" value="<%= usuario.email %>" disabled>
+                    </div>
+                    <div class="guardar">
+                        <button type="submit">Guardar</button>
+                    </div>
+
+
+                </form>
+            </article>
+        </section>
+
+    </main>
+    <%- include('../partials/footer') %>  
+</body>
+</html>

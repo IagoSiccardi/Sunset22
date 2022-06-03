@@ -1,10 +1,10 @@
 [
    {
       "id": 1,
-      "name": "iago siccardi",
+      "name": "Iago Nehuen Siccardi",
       "email": "siccardi@gmail.com",
       "password": "$2a$10$YecyLmjrstaM2kUsf3j7JOExDHQcJBrQEG1xst.FutAIs.ufqfkE.",
-      "img": "default-img.png",
+      "img": "img-1654224985423.jpg",
       "rol": "admin"
    },
    {
