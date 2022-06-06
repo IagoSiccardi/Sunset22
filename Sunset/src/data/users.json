@@ -22,5 +22,29 @@
       "password": "$2a$10$dRE2LyUhEWzJiHKKIyWsJer0SKe8xKjKr0HB8WYMYn8FukQ5MTh7K",
       "img": "default-img.png",
       "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "Celeste Lestrange",
+      "email": "celeste@gmail.com",
+      "password": "$2a$10$bScKr2o1oe6g9XepyJwGR.xwWAHFndTWErZSZnzC2Hed7LPxuWPZq",
+      "img": "img-1654225542290.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 5,
+      "name": "Joan Juan",
+      "email": "juancito@gmail.com",
+      "password": "$2a$10$6US1U.EWuvSYBz0bvqD3J.Fnf.4E46FmqndaZ7McDpfrRcpfCV28i",
+      "img": "img-1654225865936.jpg",
+      "rol": "user"
+   },
+   {
+      "id": 6,
+      "name": "Ailen Siccardi",
+      "email": "ailen@gmail.com",
+      "password": "$2a$10$.ag5xCxB/exbzPFhT74QM..UGD52FcMO46IBNViBe1C9DDfs1l5Ze",
+      "img": "img-1654306437612.jpg",
+      "rol": "user"
    }
 ]

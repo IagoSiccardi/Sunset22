@@ -114,14 +114,19 @@ module.exports = {
 
             usuarios.push(newUser)
 
+            
+            fs.writeFileSync(path.resolve(__dirname,'..','data','users.json'),JSON.stringify(usuarios,null,3),'utf-8')
+            
+            const {id, rol} = newUser
+
             req.session.userLogin = {
                 id,
                 name : nombreApellido.trim(),
                 rol
                 }
 
-            fs.writeFileSync(path.resolve(__dirname,'..','data','users.json'),JSON.stringify(usuarios,null,3),'utf-8')
-            
+            res.cookie("userSunset",req.session.userLogin,{maxAge: 1000*60*120})
+
             res.redirect('/')
         } 
 

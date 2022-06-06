@@ -48,19 +48,22 @@
             
                     <a href="" class="cartFav">Añadir a favoritos <i class="fas fa-heart"></i></a>
 
-                    
-                    
-                    <div class="formEdit">
+                    <% if (locals.userLogin && locals.userLogin.rol === "admin") {%> 
 
-                        
-                        <a href="/products/edit/<%= product.id %> " class="editDelete">Editar <i class="fas fa-edit"></i></a>
-                        
-                        <form action="/products/remove/<%=product.id%>?_method=DELETE" method="post" class="deleteForm">
+                        <div class="formEdit">
+    
                             
-                            <a href="" class="editDelete"><button type="submit">Eliminar<i class="fas fa-trash"></i> </button></a>
-                        </form>
-                        
-                    </div>
+                            <a href="/products/edit/<%= product.id %> " class="editDelete">Editar <i class="fas fa-edit"></i></a>
+                            
+                            <form action="/products/remove/<%=product.id%>?_method=DELETE" method="post" class="deleteForm">
+                                
+                                <a href="" class="editDelete"><button type="submit">Eliminar<i class="fas fa-trash"></i> </button></a>
+                            </form>
+                            
+                        </div>
+
+                    <% } %> 
+                    
                     
                     
                 </div>
