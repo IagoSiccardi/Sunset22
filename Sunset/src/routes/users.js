@@ -4,12 +4,14 @@ const {login,register,processRegister,processLogin,logout,profile,uploadProfile}
 const registerValidator = require ('../validations/registerValidator')
 const loginValidator = require('../validations/loginValidator')
 const userCheck = require('../middlewares/userCheck')
+const inSession = require('../middlewares/inSessionCheck')
 const upload = require('../middlewares/uploadUsersImages')
 
-router.get ('/login', login)
+
+router.get ('/login',inSession, login)
 router.post('/login',loginValidator, processLogin)
 
-router.get('/register',register)
+router.get('/register',inSession,register)
 router.post('/register',registerValidator, processRegister)
 
 router.get('/logout', logout)
