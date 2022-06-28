@@ -1,50 +1,152 @@
-[
-   {
-      "id": 1,
-      "name": "Iago Nehuen Siccardi",
-      "email": "siccardi@gmail.com",
-      "password": "$2a$10$YecyLmjrstaM2kUsf3j7JOExDHQcJBrQEG1xst.FutAIs.ufqfkE.",
-      "img": "img-1654224985423.jpg",
-      "rol": "admin"
-   },
-   {
-      "id": 2,
-      "name": "Mati Mateo",
-      "email": "matimateo@gmail.com",
-      "password": "$2a$10$iJGxpn9GGMtKy4zieyWzGe6BW9fQudRxJvAufIs3L1rkxYLw1GJ8u",
-      "img": "default-img.png",
-      "rol": "user"
-   },
-   {
-      "id": 3,
-      "name": "juan juancito",
-      "email": "juani@gmail.com",
-      "password": "$2a$10$dRE2LyUhEWzJiHKKIyWsJer0SKe8xKjKr0HB8WYMYn8FukQ5MTh7K",
-      "img": "default-img.png",
-      "rol": "user"
-   },
-   {
-      "id": 4,
-      "name": "Celeste Lestrange",
-      "email": "celeste@gmail.com",
-      "password": "$2a$10$bScKr2o1oe6g9XepyJwGR.xwWAHFndTWErZSZnzC2Hed7LPxuWPZq",
-      "img": "img-1654225542290.jpg",
-      "rol": "user"
-   },
-   {
-      "id": 5,
-      "name": "Joan Juan",
-      "email": "juancito@gmail.com",
-      "password": "$2a$10$6US1U.EWuvSYBz0bvqD3J.Fnf.4E46FmqndaZ7McDpfrRcpfCV28i",
-      "img": "img-1654225865936.jpg",
-      "rol": "user"
-   },
-   {
-      "id": 6,
-      "name": "Ailen Siccardi",
-      "email": "ailen@gmail.com",
-      "password": "$2a$10$.ag5xCxB/exbzPFhT74QM..UGD52FcMO46IBNViBe1C9DDfs1l5Ze",
-      "img": "img-1654306437612.jpg",
-      "rol": "user"
-   }
+[{
+   "id": 1,
+   "name": "Callean Gwynne",
+   "email": "cgwynne0@paginegialle.it",
+   "avatar": "https://robohash.org/utaliquidsimilique.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "lghRS1"
+ }, {
+   "id": 2,
+   "name": "Rolfe Hallagan",
+   "email": "rhallagan1@state.gov",
+   "avatar": "https://robohash.org/etreiciendisrerum.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "j1k0ACT5IZm"
+ }, {
+   "id": 3,
+   "name": "Wittie Reinisch",
+   "email": "wreinisch2@istockphoto.com",
+   "avatar": "https://robohash.org/modimaximemaiores.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "WJrJtDJ7O8HA"
+ }, {
+   "id": 4,
+   "name": "Chane Onge",
+   "email": "conge3@imageshack.us",
+   "avatar": "https://robohash.org/inquisapiente.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "xwtm5oe0A"
+ }, {
+   "id": 5,
+   "name": "Saraann Dayer",
+   "email": "sdayer4@apache.org",
+   "avatar": "https://robohash.org/beataeminusqui.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "sEiEUu2R"
+ }, {
+   "id": 6,
+   "name": "Walden Wherrit",
+   "email": "wwherrit5@admin.ch",
+   "avatar": "https://robohash.org/sedetdoloribus.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "U5ekwwWvLJud"
+ }, {
+   "id": 7,
+   "name": "Fran Luto",
+   "email": "fluto6@histats.com",
+   "avatar": "https://robohash.org/corruptiinventorefacilis.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "L2AZwLD51m6"
+ }, {
+   "id": 8,
+   "name": "Xavier Zimmermeister",
+   "email": "xzimmermeister7@virginia.edu",
+   "avatar": "https://robohash.org/autfugiatrepudiandae.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "AoXh0brniB"
+ }, {
+   "id": 9,
+   "name": "Nickie Hearnes",
+   "email": "nhearnes8@unesco.org",
+   "avatar": "https://robohash.org/dignissimosfacilisid.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "E8L33lmq2h"
+ }, {
+   "id": 10,
+   "name": "Alayne Presser",
+   "email": "apresser9@1688.com",
+   "avatar": "https://robohash.org/remaliquidiusto.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "xCbem3eQWM"
+ }, {
+   "id": 11,
+   "name": "Meggie Llewellin",
+   "email": "mllewellina@amazon.de",
+   "avatar": "https://robohash.org/iustodoloresest.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "qY8oUGtPQLc"
+ }, {
+   "id": 12,
+   "name": "Brina Lauritzen",
+   "email": "blauritzenb@patch.com",
+   "avatar": "https://robohash.org/quianihilet.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "ock7ie"
+ }, {
+   "id": 13,
+   "name": "Mikey Kerford",
+   "email": "mkerfordc@businesswire.com",
+   "avatar": "https://robohash.org/dignissimosperferendisdelectus.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "93lBPxUK"
+ }, {
+   "id": 14,
+   "name": "Anestassia Bythway",
+   "email": "abythwayd@shinystat.com",
+   "avatar": "https://robohash.org/porrocupiditateplaceat.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "gdVBO4Yl"
+ }, {
+   "id": 15,
+   "name": "Honey Borrowman",
+   "email": "hborrowmane@whitehouse.gov",
+   "avatar": "https://robohash.org/quopariaturadipisci.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "Tw9meyqM"
+ }, {
+   "id": 16,
+   "name": "Brooke Mower",
+   "email": "bmowerf@home.pl",
+   "avatar": "https://robohash.org/veronobisfugit.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "ouQ05GANReY"
+ }, {
+   "id": 17,
+   "name": "Perl Potier",
+   "email": "ppotierg@seesaa.net",
+   "avatar": "https://robohash.org/sedconsequatursapiente.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "yjTxLZ"
+ }, {
+   "id": 18,
+   "name": "Janina Doale",
+   "email": "jdoaleh@nps.gov",
+   "avatar": "https://robohash.org/quosdoloribusiste.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "cEvpuUu"
+ }, {
+   "id": 19,
+   "name": "Francesco Battson",
+   "email": "fbattsoni@reddit.com",
+   "avatar": "https://robohash.org/consecteturaccusamusincidunt.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "8lmLwVdrmRle"
+ }, {
+   "id": 20,
+   "name": "Etan Busswell",
+   "email": "ebusswellj@sfgate.com",
+   "avatar": "https://robohash.org/quiametipsum.png?size=50x50&set=set1",
+   "rolId": 2,
+   "password": "VjoEz3slh"
+ },
+ {
+   "id": 21,
+   "name": "Iago Siccardi",
+   "email": "siccardi@gmail.com",
+   "avatar": "img-1654224985423.jpg",
+   "rolId": 1,
+   "password": "$2a$10$YecyLmjrstaM2kUsf3j7JOExDHQcJBrQEG1xst.FutAIs.ufqfkE."
+}
 ]
+    
+

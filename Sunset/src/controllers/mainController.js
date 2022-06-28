@@ -1,10 +1,20 @@
 const products = require ('../data/products.json')
+const db = require('../database/models')
 
 module.exports = {
     home : (req,res) => {
-        return res.render('home',{
-            products
+
+        db.Product.findAll({
+            include: ['collection']
         })
+            .then(products => {
+
+                return res.render('home',{
+                    products
+                })
+            })
+
+      
     },
 
     nosotros: (req,res) => {

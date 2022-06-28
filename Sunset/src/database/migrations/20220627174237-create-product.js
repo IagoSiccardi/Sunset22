@@ -16,7 +16,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
-      colecctionId: {
+      collectionId: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references : {
@@ -34,12 +34,17 @@ module.exports = {
         type: Sequelize.INTEGER,
         defaultValue: 0
       },
+      image: {
+        defaultValue: 'default-img.png',
+        type: Sequelize.STRING
+      },
+
       createdAt: {
-        allowNull: false,
+        
         type: Sequelize.DATE
       },
       updatedAt: {
-        allowNull: false,
+        
         type: Sequelize.DATE
       },
       deletedAt: {
