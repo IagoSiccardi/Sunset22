@@ -3,6 +3,8 @@ const fs = require('fs')
 
 const products = require ('../data/products.json')
 
+const db = require('../database/models')
+const { error } = require('console')
 
 const getRandom = (min, max) => {
 
@@ -29,46 +31,61 @@ module.exports = {
     
     productDetail: (req,res) => {
 
-        const {id} = req.params
-        const product = products.find(product => product.id == +id)
         
-        return res.render ('./products/productDetail',{
-            product,
-            products,
-            result
 
-        })
+        const product = db.Product.findByPk(req.params.id)
+
+        const products = db.Product.findAll()
+
+        Promise.all([product,products])
+            .then(([product,products]) => {
+
+                return res.render ('./products/productDetail',{
+                    product,
+                    products
+                })
+            })
+            .catch(error => console.log(error))
+     
+        
     },
 
     colecciones: (req,res) => {
 
-        const {colections} = req.params
+        const {collections} = req.params
         
-        const colecction = products.find(products => products.colecction == colections)
+        
+        db.Collection.findAll({
+            include: [
+            'products'
+            ],
+            where: {
+                name: collections
+            }
+        })
+            .then(collection => {
 
-        const resultado = products.filter(product => product.colecction == colections)
-
-        console.log(result)
-
+                return res.render('./products/colecciones',{
+                    collection
+                    
+                })
+            })
+            .catch(error => console.log(error))
        
 
-        return res.render('./products/colecciones',{
-            products,
-            colecction,
-            colections,
-            resultado
-            
-
-        })
     },
 
     productos: (req,res) => {
 
-       const products = JSON.parse(fs.readFileSync(path.resolve(__dirname, '..', 'data', 'products.json')))
+        db.Product.findAll()
+            .then(products => {
+               
+                return res.render ('./products/productos',{
+                    products
+                })
+            })
+            .catch(error => console.log(error))
 
-        return res.render ('./products/productos',{
-            products
-        })
     },
 
     add: (req,res) => {

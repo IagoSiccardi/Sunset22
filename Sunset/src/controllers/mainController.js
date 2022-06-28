@@ -4,15 +4,15 @@ const {Op} = require('sequelize')
 module.exports = {
     home : (req,res) => {
 
-        db.Product.findAll({
-            include: ['collection']
-        })
+        db.Product.findAll()
             .then(products => {
 
                 return res.render('home',{
                     products
                 })
             })
+
+            .catch(error => console.log(error))
 
       
     },
@@ -41,7 +41,7 @@ module.exports = {
                 productsFilter,
                 keyword
             })
-        })
+        }).catch(error => console.log(error))
 
     }
    

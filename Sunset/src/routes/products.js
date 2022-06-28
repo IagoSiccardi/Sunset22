@@ -26,7 +26,7 @@ const upload = multer({storage})
 router.get('/', productos)
 router.get ('/cart', productCart)
 router.get('/detail/:id', productDetail)
-router.get('/colecciones/:colections', colecciones)
+router.get('/colecciones/:collections', colecciones)
 
 router.get('/add', add )
 router.post('/add', upload.single('imagen'), store)

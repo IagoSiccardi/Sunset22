@@ -11,7 +11,7 @@
 
         <section class="coleccion">
 
-            <% if (colections == "Heaven") { %>
+            <% if (collection[0].name == "Heaven") { %>
                 <img src="/images/heavenCollection.jpeg" alt="">
                 <div class="title">
                     <p>Heaven</p>
@@ -30,14 +30,15 @@
 
             <h2 class="h2">Productos</h2>
 
-                <% for( let i = 0; i < resultado.length; i++ ) { %>
+
+                <% for( let i = 0; i < collection[0].products.length; i++ ) { %>
             
                     <div class="buzo">
                         <div class="img-container">
-                         <a href="/products/detail/<%=resultado[i].id%> "><img src="/images/Buzos/<%=resultado[i].image%>" alt="producto 1"></a> 
-                          <span class="price">$<%= resultado[i].price %> </span>
+                         <a href="/products/detail/<%= collection[0].products[i].id%> "><img src="/images/Buzos/<%=collection[0].products[i].image%>" alt="producto 1"></a> 
+                          <span class="price">$<%= collection[0].products[i].price %> </span>
                           </span>
-                          <p><%= resultado[i].name %> </p>
+                          <p><%=collection[0].products[i].name %> </p>
                         </div>
                     </div>
                 <% } %>

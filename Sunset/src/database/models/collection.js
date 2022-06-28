@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Collection.hasMany(models.Product,{
-        as: "collection",
+        as: "products",
         foreignKey: 'collectionId'
       })
     }
