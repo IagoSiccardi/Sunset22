@@ -1,5 +1,5 @@
-const products = require ('../data/products.json')
 const db = require('../database/models')
+const {Op} = require('sequelize')
 
 module.exports = {
     home : (req,res) => {
@@ -25,12 +25,24 @@ module.exports = {
 
         const {keyword} = req.query
 
-        const productsFilter = products.filter(product => product.name.toLowerCase().includes(keyword.toLowerCase()) || product.colecction.toLowerCase().includes(keyword.toLowerCase()))
+        db.Product.findAll({
+            where: {
+                [Op.or] : [
+                   { 
+                    name : {
+                        [Op.substring] : keyword
+                    }
+                   }
+                ]
+            }
+        }).then(productsFilter => {
 
-        return res.render('result',{ 
-            productsFilter,
-            keyword
+            return res.render('result',{ 
+                productsFilter,
+                keyword
+            })
         })
+
     }
    
 }
