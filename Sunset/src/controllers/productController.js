@@ -130,9 +130,18 @@ module.exports = {
 
     edit: (req,res) => {
 
-       db.Product.findByPk(req.params.id)
-        .then(product => {
+        const product = db.Product.findByPk(req.params.id)
+
+        const collection = db.Collection.findAll({
+            
+            order:[["name","ASC"]]
+        })
+
+        Promise.all([product,collection])
+
+        .then(([product,collection]) => {
             return res.render('./products/productEdit',{
+                collection,
                 product
             })
 
@@ -140,38 +149,32 @@ module.exports = {
     },
     update: (req,res) => {
 
-        const {id} = req.params
+        const {description, name, price, discount,coleccion} =  req.body
 
-        const{name,price,coleccion} = req.body
-        
-        const productsEdit = products.map(product => {
-
-        if (product.id === +id) {
-
-            let productEdit = {
-                id: +id,
-                name : name.trim(),
-                price: +price,
-                colecction: coleccion,
-                image : req.file ? req.file.filename  : 'default-img.png'
+        db.Product.update(
+        {
+            name:name.trim(),
+            collectionId: +coleccion,
+            discount: +discount,
+            price: +price,
+            description: description.trim(),
+            image: req.file ? req.file.filename  : 'default-img.png'
+    
+        },
+        {
+            where: {
+                id: req.params.id
             }
-
-            if(req.file){
-                if(fs.existsSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image)) && product.image !== 'default-img.png'){
-                    fs.unlinkSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image))
-                }
-            }
-
-            return productEdit
-        }   
-        
-            return product
-
         })
 
-        fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsEdit,null,3),'utf-8')
+            .then( () => {
 
-        res.redirect('/products')
+                return res.redirect('/products')
+            })
+
+            .catch(error => console.log(error))
+
+        
     },
 
     remove:(req,res) => {

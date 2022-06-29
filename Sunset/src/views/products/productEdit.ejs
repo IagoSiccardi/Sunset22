@@ -8,12 +8,12 @@
     <main class="formularios">
 
         <section>
-            <h2> Agregar producto</h2>
-            <form method="post" enctype="multipart/form-data">
+            <h2> Editar producto : <%= product.name %></h2>
+            <form action="/products/edit/<%= product.id %>?_method=PUT" method="post" enctype="multipart/form-data">
                 <div>
                     <label>
                         <span>Nombre del producto</span>
-                        <input type="text" name="name" autocomplete="off" >
+                        <input type="text" name="name" autocomplete="off" required value="<%= product.name %>">
 
                     </label>
 
@@ -21,15 +21,18 @@
                 <div>
                     <label>
                         <span>Precio del producto</span>
-                        <input type="number" name="price" autocomplete="off"  >
+                        <input type="number" name="price" autocomplete="off" required value="<%= product.price %>">
 
                     </label>
 
                 </div>
-                <div>
+
+
+                
+               <div>
                     <label>
                         <span>Descripction del producto</span>
-                        <textarea name="description" id="" cols="65 " rows="10"></textarea>
+                        <textarea name="description" id="" cols="65 " rows="10"><%= product.description %></textarea>
 
                     </label>
 
@@ -37,7 +40,7 @@
                 <div>
                     <label>
                         <span>Descuento del producto</span>
-                        <input type="number" name="discount" autocomplete="off"  >
+                        <input type="number" name="discount" autocomplete="off" value="<%= product.discount %>">
 
                     </label>
 
@@ -61,14 +64,13 @@
                 </div>
                 
                 <div>
-                    <input type="file" name="imagen" id="imagen" enctype>
+                    <input type="file" name="imagen" id="imagen">
                 </div>
 
                 <div>
                     
-                    <button class="loginButton" type="submit">Crear</button>
+                    <button class="loginButton" type="submit">Editar</button>
                 </div>
-
                 
             </form>
         </section>
