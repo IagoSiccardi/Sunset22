@@ -13,7 +13,7 @@
                 <div>
                     <label>
                         <span>Nombre del producto</span>
-                        <input type="text" name="name" autocomplete="off" required>
+                        <input type="text" name="name" autocomplete="off" >
 
                     </label>
 
@@ -21,21 +21,41 @@
                 <div>
                     <label>
                         <span>Precio del producto</span>
-                        <input type="number" name="price" autocomplete="off" required >
+                        <input type="number" name="price" autocomplete="off"  >
 
                     </label>
 
                 </div>
+                <div>
+                    <label>
+                        <span>Descripction del producto</span>
+                        <textarea name="description" id="" cols="65 " rows="10"></textarea>
+
+                    </label>
+
+                </div>
+                <div>
+                    <label>
+                        <span>Descuento del producto</span>
+                        <input type="number" name="discount" autocomplete="off"  >
+
+                    </label>
+
+                </div>
+                
+                
                 
                 <div>
                     <select name="coleccion" id="coleccion">
                         
     
                             <option value="" hidden selected>Eliga la coleccion</option>
+
+                            <% collection.forEach(colecct => { %>
+                                <option value="<%= colecct.id %>"><%= colecct.name %></option>
+                                
+                            <% }) %>
                             
-                             <option value="Heaven">Heaven</option>
-                             <option value="Hell">Hell</option>
-    
                     </select>
 
                 </div>

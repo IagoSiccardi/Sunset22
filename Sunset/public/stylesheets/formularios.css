@@ -1,14 +1,18 @@
 .formulariosHTML {
-    padding-bottom: 165px;
+    padding-bottom: 155px;
 }
 
+textarea {
+    width: 100%;
+    resize: none;
+}
 
 .formularios {
     display: flex;
     flex-direction: column;
     
     justify-content: space-evenly;
-    height: 76vh;
+    height: 80vh;
     background-color: var(--Naranja);
     background-image: url(/images/background.jpg);
     background-blend-mode: soft-light;
@@ -217,7 +221,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        
     }
    
 
@@ -229,7 +234,7 @@
 @media (min-width : 744px) {
    
     .formularios {
-        height: 73vh;
+        height: 80vh;
     }
 
     .formularios section form div {

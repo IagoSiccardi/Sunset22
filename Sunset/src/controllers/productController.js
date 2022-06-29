@@ -89,42 +89,53 @@ module.exports = {
     },
 
     add: (req,res) => {
-        return res.render('./products/productAdd',{
-            products
+
+        db.Collection.findAll({
+            
+            order:[["name","ASC"]]
         })
+            .then(collection => {
+                
+                return res.render('./products/productAdd',{
+                    collection
+                })
+
+            })
+            .catch(error => console.log(error))
+
     },
 
     store: (req,res) => {
-        const {name,price,coleccion} = req.body
 
-        const lastId = products[products.length -1 ].id + 1
+        const {description, name, price, discount,coleccion} =  req.body
 
-        const newProduct = {
-            
-            id: lastId,
-            name: name.trim(),
+        db.Product.create({
+            name:name.trim(),
+            collectionId: +coleccion,
+            discount: +discount,
             price: +price,
-            colecction : coleccion,
+            description: description.trim(),
             image: req.file ? req.file.filename  : 'default-img.png'
-        }
+    
+        })
 
-        products.push(newProduct)
+            .then( () => {
 
-        fs.writeFileSync(path.resolve(__dirname,'..', 'data', 'products.json'), JSON.stringify(products,null,3),'utf-8')
+                return res.redirect('/products')
+            })
 
-        res.redirect('/products')
-
+            .catch(error => console.log(error))
 
     },
 
     edit: (req,res) => {
 
-        const {id} = req.params
+       db.Product.findByPk(req.params.id)
+        .then(product => {
+            return res.render('./products/productEdit',{
+                product
+            })
 
-        const product = products.find(product => product.id == +id)
-
-        return res.render('./products/productEdit',{
-            product
         })
     },
     update: (req,res) => {
