@@ -1,4 +1,6 @@
 const usuarios = require('../data/users.json')
+
+const db = require('../database/models')
 const {validationResult} = require('express-validator')
 const bcrypt = require ('bcryptjs')
 const fs = require('fs')
@@ -15,14 +17,19 @@ module.exports = {
         
         if(errors.isEmpty()) {
 
+            db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
 
-            const {id, name, rol } = usuarios.find(usuario => usuario.email === req.body.email);
+            .then((user) => {
 
-           req.session.userLogin = {
-           id,
-           name,
-           rol
-           }
+            req.session.userLogin = {
+                id: user.id,
+                name: user.name,
+                rol: user.rolId
+            }
 
             if(req.body.recordame === "on"){
                 res.cookie("userSunset",req.session.userLogin,{maxAge: 1000*60*120})
@@ -30,8 +37,10 @@ module.exports = {
 
            return res.redirect('/')
 
+        })
 
-        
+            .catch(error => console.log(error))
+
         }
         else {
             return res.render('./users/login',{
@@ -101,33 +110,29 @@ module.exports = {
         if(errors.isEmpty()){
              const {nombreApellido,email,password} = req.body
 
-             const lastId = usuarios[usuarios.length - 1].id + 1
 
-             const newUser = {
-                 id : +lastId,
-                 name : nombreApellido.trim(),
+             db.User.create({
+                name : nombreApellido.trim(),
                  email: email.trim(),
                  password: bcrypt.hashSync(password,10),
-                 img : 'default-img.png',
-                 rol : 'user'
-             }
+                 avatar : 'default-img.png',
+                 rolId : 2
+             })
 
-            usuarios.push(newUser)
+             .then(user => {
 
-            
-            fs.writeFileSync(path.resolve(__dirname,'..','data','users.json'),JSON.stringify(usuarios,null,3),'utf-8')
-            
-            const {id, rol} = newUser
+                 req.session.userLogin = {
+                     id: user.id,
+                     name : user.name,
+                     rolId: user.rolId
+                     }
+     
+                 res.cookie("userSunset",req.session.userLogin,{maxAge: 1000*60*120})
+     
+                 res.redirect('/')
+             })
 
-            req.session.userLogin = {
-                id,
-                name : nombreApellido.trim(),
-                rol
-                }
 
-            res.cookie("userSunset",req.session.userLogin,{maxAge: 1000*60*120})
-
-            res.redirect('/')
         } 
 
         else {

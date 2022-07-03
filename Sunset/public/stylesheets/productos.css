@@ -70,6 +70,25 @@
     text-align: center;
     font-family: 'AdihausDIN';
     font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.PRODUCTOS .container .h2 a {
+    font-size: 16px;
+    padding: 15px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.PRODUCTOS .container .h2 a:hover {
+    transform: scale(1.05);
+    background-color: var(--Naranja);
+    color: black;
 }
 
 .PRODUCTOS .buzo {

@@ -43,9 +43,15 @@
             </article>
         </section>
             <section class="container">
+            
+            
 
-            <h2 class="h2"> Productos</h2>
+            <h2 class="h2">Productos <% if (locals.userLogin && locals.userLogin.rol === 1) {%> 
+                <a href="/products/add">Crear nuevo producto</a>
+            <% } %>
+</h2>
 
+           
                 <% for( let i = 0; i < products.length; i++ ) { %>
             
                     <div class="buzo">

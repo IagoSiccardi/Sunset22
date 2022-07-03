@@ -179,22 +179,27 @@ module.exports = {
 
     remove:(req,res) => {
 
-        const {id} = req.params
+        db.Product.findByPk(req.params.id)
+            .then(product => {
+                if(req.file){
+                    if(fs.existsSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image)) && product.image !== 'default-img.png'){
+                        fs.unlinkSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image))
+                    }
+                }
+            })
 
     
-        const productsEdit = products.filter(product => product.id !== +id)
-
-        fs.writeFileSync(path.resolve(__dirname, '..', 'data', 'products.json'),JSON.stringify(productsEdit,null,3),'utf-8')
-
-        if(req.file){
-            if(fs.existsSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image)) && product.image !== 'default-img.png'){
-                fs.unlinkSync(path.resolve(__dirname,'..', '..', 'public', 'images','Buzos',  product.image))
+        db.Product.destroy({
+            where: {
+                id: req.params.id
             }
-        }
+        })
+            .then(() => {
+               return  res.redirect('/products')
+            })
 
-
-        res.redirect('/products')
-
+            .catch(error => console.log(error))
+    
 
     }
 }
