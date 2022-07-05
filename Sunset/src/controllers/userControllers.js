@@ -1,5 +1,3 @@
-const usuarios = require('../data/users.json')
-
 const db = require('../database/models')
 const {validationResult} = require('express-validator')
 const bcrypt = require ('bcryptjs')
@@ -20,7 +18,8 @@ module.exports = {
             db.User.findOne({
                 where: {
                     email: req.body.email
-                }
+                },
+                include: ["rol"]
             })
 
             .then((user) => {
@@ -28,8 +27,9 @@ module.exports = {
             req.session.userLogin = {
                 id: user.id,
                 name: user.name,
-                rol: user.rolId
+                rol: user.rol.name
             }
+
 
             if(req.body.recordame === "on"){
                 res.cookie("userSunset",req.session.userLogin,{maxAge: 1000*60*120})
@@ -60,42 +60,51 @@ module.exports = {
 
     profile : (req,res) => {
 
-        const usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','users.json'),'utf-8'))
-
-        let usuario = usuarios.find(usuario => usuario.id === req.session.userLogin.id)
-
-        res.render('./users/profile',{
-            usuario
+        db.User.findByPk(req.session.userLogin.id,{
+            include: ["rol"]
         })
+            .then(usuario => {
+                    
+                    return res.render('./users/profile',{
+                    usuario
+                })
+       
+            })
+            .catch(error => console.log(error))
+    
+
     },
     uploadProfile : (req,res) => {
+
         const {nombreApellido} = req.body
 
-        const {id} = usuarios.find(usuario => usuario.id === req.session.userLogin.id)
 
-        const usersEdit = usuarios.map(usuario => {
-            if (usuario.id === +id){
-                let userEdit = {
-                    ...usuario,
-                    name : nombreApellido.trim(),
-                    img : req.file ? req.file.filename : usuario.img
-                }
+        db.User.findByPk(req.session.userLogin.id)
+            .then(user => {
+                
+                db.User.update({
+        
+                    name: nombreApellido.trim(),
+                    avatar: req.file ? req.file.filename : user.avatar
+        
+                },
+                {
+                    where: {
+                        id: req.session.userLogin.id
+                    }
+                })
+                    .then(() => {
 
-                if(req.file){
-                   if( fs.existsSync(path.resolve(__dirname,'..','..','public', 'images', 'users', usuario.img)) && usuario.img !== 'default-img.png'){
-                       fs.unlinkSync(path.resolve(__dirname,'..','..','public', 'images', 'users', usuario.img))
-                   }
-                }
+                        if(req.file){
+                            if( fs.existsSync(path.resolve(__dirname,'..','..','public', 'images', 'users', user.avatar)) && user.avatar !== 'default-img.png'){
+                                fs.unlinkSync(path.resolve(__dirname,'..','..','public', 'images', 'users', user.avatar))
+                            }
+                         }
+                        return res.redirect('/')
+                    } )
 
-                return userEdit
-            } 
-
-            return usuario
-        })
-
-        fs.writeFileSync(path.resolve(__dirname, '..' , 'data' , 'users.json'),JSON.stringify(usersEdit,null,3),'utf-8')
-
-        res.redirect('/')
+            })
+            .catch(error => console.log(error))
 
     },
 

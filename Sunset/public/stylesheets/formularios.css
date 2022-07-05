@@ -2,23 +2,38 @@
     padding-bottom: 155px;
 }
 
+.formulariosCreateHTML {
+    padding-bottom: 170px;
+}
+
 textarea {
     width: 100%;
     resize: none;
 }
 
+
+.formulariosCreateBody {
+    min-height: 100vh;
+     background-color: var(--Naranja);
+    background-image: url(/images/background.jpg);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .formularios {
     display: flex;
     flex-direction: column;
-    
-    justify-content: space-evenly;
-    height: 80vh;
     background-color: var(--Naranja);
     background-image: url(/images/background.jpg);
     background-blend-mode: soft-light;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    justify-content: space-evenly;
+    height: 110vh;
+   
     
 
 }
@@ -234,7 +249,7 @@ textarea {
 @media (min-width : 744px) {
    
     .formularios {
-        height: 80vh;
+        height: 110vh;
     }
 
     .formularios section form div {

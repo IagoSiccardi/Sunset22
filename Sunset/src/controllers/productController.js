@@ -1,26 +1,9 @@
 const path = require ('path')
 const fs = require('fs')
-
-const products = require ('../data/products.json')
-
+const {validationResult} = require('express-validator')
 const db = require('../database/models')
-const { error } = require('console')
 
-const getRandom = (min, max) => {
 
-    return Math.round( Math.random() * (max - min) + min)
-
-  }
-  
-  const resultado = (getRandom(1,products.length))
-  const resultado2 = (getRandom(1,products.length))
-  const resultado3 = (getRandom(1,products.length))
-  let result = []
-  
-for (let i = 0; i < 1; i++) {
-    result.push(resultado,resultado2,resultado3)
-
-}
 
 
 module.exports = {
@@ -31,8 +14,7 @@ module.exports = {
     
     productDetail: (req,res) => {
 
-        
-
+    
         const product = db.Product.findByPk(req.params.id)
 
         const products = db.Product.findAll()
@@ -90,6 +72,8 @@ module.exports = {
 
     add: (req,res) => {
 
+       
+
         db.Collection.findAll({
             
             order:[["name","ASC"]]
@@ -107,24 +91,51 @@ module.exports = {
 
     store: (req,res) => {
 
-        const {description, name, price, discount,coleccion} =  req.body
+        let errors = validationResult(req)
 
-        db.Product.create({
-            name:name.trim(),
-            collectionId: +coleccion,
-            discount: +discount,
-            price: +price,
-            description: description.trim(),
-            image: req.file ? req.file.filename  : 'default-img.png'
-    
-        })
+        
+        if(errors.isEmpty()) {
+            
+            const {description, name, price, discount,coleccion} =  req.body
 
-            .then( () => {
-
-                return res.redirect('/products')
+            db.Product.create({
+                name:name.trim(),
+                collectionId: +coleccion,
+                discount: +discount,
+                price: +price,
+                description: description.trim(),
+                image: req.file ? req.file.filename  : 'default-img.png'
+        
             })
+    
+                .then( () => {
+    
+                    return res.redirect('/products')
+                })
+    
+                .catch(error => console.log(error))
+        }else {
 
-            .catch(error => console.log(error))
+
+            db.Collection.findAll({
+            
+                order:[["name","ASC"]]
+            })
+                .then(collection => {
+                    
+                    return res.render('./products/productAdd',{
+                        collection,
+                        errores : errors.mapped(),
+                        old : req.body
+                    })
+    
+                })
+                .catch(error => console.log(error))
+
+        }
+
+
+
 
     },
 
@@ -149,30 +160,59 @@ module.exports = {
     },
     update: (req,res) => {
 
-        const {description, name, price, discount,coleccion} =  req.body
+        let errors = validationResult(req)
 
-        db.Product.update(
-        {
-            name:name.trim(),
-            collectionId: +coleccion,
-            discount: +discount,
-            price: +price,
-            description: description.trim(),
-            image: req.file ? req.file.filename  : 'default-img.png'
+        if(errors.isEmpty()){
+            
+            const {description, name, price, discount,coleccion} =  req.body
     
-        },
-        {
-            where: {
-                id: req.params.id
-            }
-        })
+            db.Product.update(
+            {
+                name:name.trim(),
+                collectionId: +coleccion,
+                discount: +discount,
+                price: +price,
+                description: description.trim(),
+                image: req.file ? req.file.filename  : 'default-img.png'
+        
+            },
+            {
+                where: {
+                    id: req.params.id
+                }
+            })
+    
+                .then( () => {
+    
+                    return res.redirect('/products')
+                })
+    
+                .catch(error => console.log(error))
 
-            .then( () => {
+        }else {
 
-                return res.redirect('/products')
+
+            const product = db.Product.findByPk(req.params.id)
+
+            const collection = db.Collection.findAll({
+                
+                order:[["name","ASC"]]
+            })
+    
+            Promise.all([product,collection])
+    
+            .then(([product,collection]) => {
+                return res.render('./products/productEdit',{
+                    collection,
+                    product,
+                    errores : errors.mapped(),
+                    old : req.body
+                })
+    
             })
 
-            .catch(error => console.log(error))
+        }
+
 
         
     },

@@ -13,17 +13,23 @@
                 <div>
                     <label>
                         <span>Nombre del producto</span>
-                        <input type="text" name="name" autocomplete="off" required value="<%= product.name %>">
+                        <input type="text" name="name" autocomplete="off"  value="<%= product.name %>">
 
                     </label>
+                    <% if (locals.errores && errores.name) { %>
+                        <p class="errorForm"> <%= errores.name.msg  %> </p>
+                    <% } %>
 
                 </div>
                 <div>
                     <label>
                         <span>Precio del producto</span>
-                        <input type="number" name="price" autocomplete="off" required value="<%= product.price %>">
+                        <input type="number" name="price" autocomplete="off"  value="<%= product.price %>">
 
                     </label>
+                    <% if (locals.errores && errores.price) { %>
+                        <p class="errorForm"> <%= errores.price.msg  %> </p>
+                    <% } %>
 
                 </div>
 
@@ -35,6 +41,9 @@
                         <textarea name="description" id="" cols="65 " rows="10"><%= product.description %></textarea>
 
                     </label>
+                    <% if (locals.errores && errores.description) { %>
+                        <p class="errorForm"> <%= errores.description.msg  %> </p>
+                    <% } %>
 
                 </div>
                 <div>
@@ -43,6 +52,7 @@
                         <input type="number" name="discount" autocomplete="off" value="<%= product.discount %>">
 
                     </label>
+                    
 
                 </div>
                 

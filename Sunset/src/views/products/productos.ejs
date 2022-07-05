@@ -46,7 +46,7 @@
             
             
 
-            <h2 class="h2">Productos <% if (locals.userLogin && locals.userLogin.rol === 1) {%> 
+            <h2 class="h2">Productos <% if (locals.userLogin && locals.userLogin.rol === "admin") {%> 
                 <a href="/products/add">Crear nuevo producto</a>
             <% } %>
 </h2>
