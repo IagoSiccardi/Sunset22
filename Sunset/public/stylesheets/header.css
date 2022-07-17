@@ -1,14 +1,59 @@
 header {
-    background-color: black;
-    
+    margin-bottom: 29px;
+    z-index: 1;
+    position: relative;
+}
+
+header .responsive__menu {
+    background: linear-gradient(90deg, rgba(233,110,32,1) 0%, rgba(253,29,29,1) 50%, rgba(255,214,0,1) 100%);
+    transition: .5s;
+    width: 100%;
+    margin-top: -70%;
+    display: block;
+    z-index: -1;
+    position: relative;
+    margin-bottom: -30px ;
+
+}
+
+header .show {
+    margin-top: 0;
     
 }
 
+header .responsive__menu .ul__responsive {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    position: relative;
+    gap: 10px;
+}
+
+
+
+header .responsive__menu .ul__responsive li a{
+    color: white;
+    font-family: 'AdihausDIN';
+    font-weight: 400;
+    font-size: 18px;
+    transition: .5s;   
+    width: 100%;
+    display: block;
+}
+
+header .responsive__menu .ul__responsive li a:hover {
+    transform: scale(1.1);
+    transform: translateX(5px);
+}
+
 header section {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     column-gap: 20px;
+    background-color: black;
+    /* z-index: 1; */
     
 }
 
@@ -16,7 +61,7 @@ header section .logo {
     width: 33%;
 }
 
-header section ul {
+header section .iconos {
     display: none;
     width: 33%;
     
@@ -24,8 +69,7 @@ header section ul {
 
 header section .paginas {
     display: none;
-
-    
+   
 }
 
 
@@ -44,8 +88,7 @@ header section .paginas li {
 header section .paginas li:hover {
 
     transform: scale(1.1)
-    
-    
+
 }
 
 
@@ -111,10 +154,6 @@ body header .logo img:hover{
 
 
 
-    
-
-
-
 body header .logo img{
     
     transition: all 0.5s;
@@ -171,7 +210,7 @@ body header .iconos li a i {
 
 
     header section .iconos {
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         font-size: 25px;
         gap:1rem;
@@ -184,6 +223,10 @@ body header .iconos li a i {
 
 @media (min-width : 744px) {
 
+
+    header .responsive__menu {
+        display: none ;
+    }
 
 
     header section .paginas {
