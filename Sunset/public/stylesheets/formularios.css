@@ -11,10 +11,19 @@ textarea {
     resize: none;
 }
 
+.body_form{
+    background-color: var(--Naranja);
+    background-image: url(/images/background.jpg);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 
 .formulariosCreateBody {
     min-height: 100vh;
-     background-color: var(--Naranja);
+    
     background-image: url(/images/background.jpg);
     background-blend-mode: soft-light;
     background-repeat: no-repeat;
