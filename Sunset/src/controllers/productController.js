@@ -239,5 +239,20 @@ module.exports = {
             .catch(error => console.log(error))
     
 
+    },
+    checkProducts: async(req,res) => {
+
+       try {
+            
+            let result = await db.Product.findAll({
+                limit: 9
+            })
+
+            return res.status(200).json(result)
+
+        } catch (error) {
+
+            return res.status(500).json(error)
+        }
     }
 }

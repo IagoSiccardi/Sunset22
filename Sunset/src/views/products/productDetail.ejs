@@ -9,7 +9,7 @@
         <section class="general">
 
             <div class="producto">
-                <img src="/images/Buzos/<%=product.image%> " alt="">
+                <img src="/images/Buzos/<%=product.image%>" alt="">
                 <p class="nombre"> <%=product.name %> </p>
                 <span class="precio">$<%=product.price%></span>
                 
@@ -75,17 +75,33 @@
         </div>
         <section class="puedeInteresarte">
 
-            <% for( let i = 0; i < 3; i++ ) { %>
+            
             
                 <article class="buzo">
                     <div class="img-container">
-                        <a href="/products/detail/<%= products[i].id %> "> <img src="/images/Buzos/<%= products[i].image %> " alt="producto 1"> </a>
-                      <span class="price">$<%= products[i].price %></span>
+                        <a href="/products/detail/1 " id="enlace_random"> <img id="image_random" src="/images/Buzos/default-img.png" alt="producto 1"> </a>
+                      <span class="price" id="price_random">No disponible</span>
                       </span>
-                      <p><%= products[i].name %> </p>
+                      <p id="name_random">No disponible</p>
                     </div>
                 </article>
-            <% } %> 
+                <article class="buzo">
+                    <div class="img-container">
+                        <a href="/products/detail/1" id="enlace_random1"> <img id="image_random1" src="/images/Buzos/default-img.png" alt="producto 1"> </a>
+                      <span class="price" id="price_random1">No disponible</span>
+                      </span>
+                      <p id="name_random1">No disponible</p>
+                    </div>
+                </article>
+                <article class="buzo">
+                    <div class="img-container">
+                        <a href="/products/detail/1" id="enlace_random2"> <img id="image_random2" src="/images/Buzos/default-img.png" alt="producto 1"> </a>
+                      <span class="price" id="price_random2">No disponible</span>
+                      </span>
+                      <p id="name_random2">No disponible</p>
+                    </div>
+                </article>
+          
 
         
         </section>
