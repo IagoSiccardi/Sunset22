@@ -17,6 +17,10 @@ header .responsive__menu {
 
 }
 
+header .divHeader {
+    display: none
+}
+
 header .show {
     margin-top: 0;
     
@@ -118,6 +122,8 @@ header section .iconos {
     
     
 }
+
+
 
 header .iconos form {
     display: none;
@@ -288,6 +294,80 @@ body header .iconos li a i {
     header section .iconos form{
         display: block;
         
+    }
+
+    header .divHeader {
+        display: block
+    }
+
+
+    .result_div {
+        width: 400px;
+        height: 130px;
+        background-color: black;
+        position: relative;
+        position: absolute;
+        top: 72px;
+        right: 10px;
+        
+    }
+    
+    .result_container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+    
+    }
+    
+    .result_container .result_image {
+        width: 40%;
+        height: 100%;
+        padding: 2px;
+    
+    }
+    
+    .result_container .result_description {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        padding-left:5px;
+    
+    }
+    
+    .result_container .result_description .result_name {
+        font-size: 16px;
+        color: white;
+        margin-top: 13px;
+        font-family: 'AdihausDIN';
+        font-weight: 500;
+               
+    }
+    
+    .result_container .result_description .result_price{
+        font-size: 14px;
+        color: white;
+        font-weight: 500;
+        margin-top: 10px;
+        font-family: 'AdihausDIN';
+
+    }
+    
+    
+    .result_div::before {
+        position: absolute;
+        z-index: 1;
+        height: 15px;
+        width: 15px;
+        content: '';
+        background-color: black;
+        top: -5px;
+        right: 95px;
+        border-left: solid 1px transparent;
+        border-top: solid 1px transparent;
+        transform: rotate(134deg) skewX(-10deg) skewY(-10deg);
+    
+    
     }
 
 }

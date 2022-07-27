@@ -53,37 +53,42 @@ let nameR2 = qs("name_random2")
 window.addEventListener("load", async(event) => {
     
     // HEADER //
-    
-    let searchForm = qs('search_input')
+    let header = document.querySelector('header')
+    let searchForm = qs('search_form')
+    let searchInput = qs('search_input')
+    const div = document.createElement("div")
 
-    searchForm.addEventListener ('keydown', async function() {
+    searchForm.addEventListener('click', () => {
+        header.appendChild(div)
+        div.classList.add('divHeader')
 
-        console.log(this.value)
+    } )
 
+    searchInput.addEventListener ('keyup', async function() {
+
+        if(this.value == ''){
+            div.classList.remove('result_div')
+            div.innerHTML = '' 
+        }
+        
         try {
-            
-            let products = []
-
-            let response = await fetch(UrlActual + '/products/api')
+    
+    
+            let response = await fetch(UrlActual + '/api/result?keyword=' +this.value)
             let result = await response.json()
 
-            result.forEach(product => {
-
-                if(product.name.toLowerCase().includes(this.value.toLowerCase())){
-
-                    products.push(product)
-                }
-
-            });    
-                
-            if(products.length > 0){
-
-                alert(products[0].name)
+            if(result.length > 0 && this.value !== ''){
+                div.classList.add('result_div')
+                div.innerHTML = `<a href=/products/detail/${result[0].id} class="result_container"><img class="result_image" src="/images/Buzos/${result[0].image}">
+                <div class="result_description">
+                <p class="result_name">${result[0].name}</p>
+                <span class="result_price">$${result[0].price}</span>
+                </div>
+                </a>`
             }
 
-
-            console.log(products)
-
+               
+           
 
         }catch (error) {
             console.log(error)
