@@ -43,6 +43,30 @@ module.exports = {
             })
         }).catch(error => console.log(error))
 
+    },
+
+    searchApi: (req,res) => {
+
+        const {keyword} = req.query
+
+        db.Product.findAll({
+            where: {
+                [Op.or] : [
+                   { 
+                    name : {
+                        [Op.substring] : keyword
+                    }
+                   }
+                ]
+            }
+        })
+            .then(result => {
+                res.status(200).json(result)
+        })
+
+            .catch(error => console.log(error))
+
+
     }
    
 }
