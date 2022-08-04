@@ -13,6 +13,7 @@
                 <div id="container_div">
                     <label id="label_login" class="labelForm">
                         <i class="fas fa-exclamation-circle iconTransparent" id="errorIcon"></i>
+                        <i class="far fa-check-circle iconTransparent" id="doneIcon"></i>
                         <span>Email</span>
                         <input type="text" name="email" value="<%= locals.old && old.email ? old.email : null %>" id="email_input">
                     </label>
@@ -22,8 +23,10 @@
                     <% } %>
 
                 </div>
-                <div >
-                    <label class="labelForm">
+                <div id="container_divPassword">
+                    <label class="labelForm" id="label_password">
+                        <i class="fas fa-exclamation-circle iconTransparent" id="errorIconPassword"></i>
+                        <i class="far fa-check-circle iconTransparent" id="doneIconPassword"></i>
                         <span>Contraseña</span>
                         <input type="password" name="password" autocomplete="off" id="password_input">
 
@@ -31,12 +34,16 @@
                     <% if (locals.errores && errores.password) { %>
                         <p class="errorForm"> <%= errores.password.msg  %> </p>
                     <% } %>
+                </div>
+                <div>
 
                     <p class="formularioP">Recordar contraseña <input type="checkbox" name="recordame" id=""></p>
                     <button class="loginButton" type="submit">Ingresar</button>
                     <p  class="formularioP">¿No tienes cuenta? Registrate <a href="/users/register">aquí</a></p>
                     
+
                 </div>
+
             
 
             </form>

@@ -160,6 +160,21 @@ textarea {
     border: solid 2px red !important;
 }
 
+
+.labelDone {
+
+    border: 2px solid rgb(49, 148, 46) !important;
+}
+
+.doneIcon{
+    color: rgb(49, 148, 46);
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    top: calc(50% - 10px);
+    
+}
+
 .errorIcon {
     position: absolute;
     right: 10px;
