@@ -9,21 +9,23 @@
 
         <section>
             <h2>Iniciar Sesión</h2>
-            <form method="POST">
-                <div>
-                    <label>
+            <form method="POST" id="login_form">
+                <div id="container_div">
+                    <label id="label_login" class="labelForm">
+                        <i class="fas fa-exclamation-circle iconTransparent" id="errorIcon"></i>
                         <span>Email</span>
-                        <input type="text" name="email" value="<%= locals.old && old.email ? old.email : null %>" >
+                        <input type="text" name="email" value="<%= locals.old && old.email ? old.email : null %>" id="email_input">
                     </label>
+                    
                     <% if (locals.errores && errores.email) { %>
                         <p class="errorForm"> <%= errores.email.msg  %> </p>
                     <% } %>
 
                 </div>
-                <div>
-                    <label>
+                <div >
+                    <label class="labelForm">
                         <span>Contraseña</span>
-                        <input type="password" name="password" autocomplete="off" >
+                        <input type="password" name="password" autocomplete="off" id="password_input">
 
                     </label>
                     <% if (locals.errores && errores.password) { %>
@@ -42,5 +44,6 @@
         
     </main>
     <%- include('../partials/footer') %> 
+    <script src="/js/forms.js"></script>
 </body>
 </html>

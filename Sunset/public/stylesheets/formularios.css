@@ -145,7 +145,7 @@ textarea {
 }
 
 
-.formularios section form div label {
+.formularios section form div .labelForm {
     display: block;
     width: 75%;
     border: 2px solid black;
@@ -155,7 +155,29 @@ textarea {
     
 }
 
-.formularios section form div label input {
+.labelError{
+    
+    border: solid 2px red !important;
+}
+
+.errorIcon {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    top: calc(50% - 10px);
+    color: red;
+}
+
+.iconTransparent{
+
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    top: calc(50% - 10px);
+    color: transparent;
+}
+
+.formularios section form div .labelForm input {
     
     display: block;
     width: 100%;
@@ -168,7 +190,7 @@ textarea {
     font-weight: 600;
 }
 
-.formularios section form div label span {
+.formularios section form div .labelForm span {
     color: gray;
     padding: 0;
     position: absolute;
@@ -217,13 +239,13 @@ textarea {
 }
 
 
-.formularios section form div label:focus {
+.formularios section form div .labelForm:focus {
     border-color: var(--Naranja);
 
 }
 
 
-.formularios section form div label span {
+.formularios section form div .labelForm span {
     left: 2px;
     top: -10px;
     color: black;
