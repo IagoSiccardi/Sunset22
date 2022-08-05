@@ -9,21 +9,25 @@
 
         <section>
             <h2>Bienvenid@!</h2>
-            <form method="post">
-                <div>
-                    <label>
+            <form method="post" id="registerForm">
+                <div id="registerContainer_NYA">
+                    <label class="labelForm" id="registerLabel_NYA">
+                        <i class="fas fa-exclamation-circle iconTransparent" id="register_errorIconNYA"></i>
+                        <i class="far fa-check-circle iconTransparent" id="register_doneIconNYA"></i>
                         <span>Nombre y apellido</span>
-                        <input type="text" name="nombreApellido" autocomplete="off" value="<%= locals.old && old.nombreApellido ? old.nombreApellido : null %>" %> >
+                        <input type="text" name="nombreApellido" autocomplete="off" id="registerInput_NYA" value="<%= locals.old && old.nombreApellido ? old.nombreApellido : null %>" %> >
                     </label>
                     <% if (locals.errores && errores.nombreApellido) { %>
                         <p class="errorForm"> <%=errores.nombreApellido.msg%> </p>
 
                     <% } %>
                 </div>
-                <div>
-                    <label>
+                <div id="registerContainer_email">
+                    <label class="labelForm" id="registerLabel_email">
+                        <i class="fas fa-exclamation-circle iconTransparent" id="register_errorIconEmail"></i>
+                        <i class="far fa-check-circle iconTransparent" id="register_doneIconEmail"></i>
                         <span>Email</span>
-                        <input type="text" name="email" autocomplete="off" value="<%= locals.old && old.email ? old.email : null %>" >
+                        <input type="text" name="email" autocomplete="off" id="registerInput_email" value="<%= locals.old && old.email ? old.email : null %>" >
                     </label>
                     <% if (locals.errores && errores.email) { %>
                         <p class="errorForm"> <%= errores.email.msg  %> </p>
@@ -33,10 +37,12 @@
                     
 
                 </div>
-                <div>
-                    <label>
+                <div id="registerContainer_password">
+                    <label class="labelForm" id="registerLabel_password">
+                        <i class="fas fa-exclamation-circle iconTransparent" id="errorIconPassword"></i>
+                        <i class="far fa-check-circle iconTransparent" id="doneIconPassword"></i>
                         <span>Contraseña</span>
-                        <input type="password" name="password" autocomplete="off">
+                        <input type="password" name="password" autocomplete="off" id="registerInput_password">
                     </label>
                     <% if (locals.errores && errores.password) { %>
                         <p class="errorForm"> <%= errores.password.msg %> </p>
@@ -44,10 +50,12 @@
                     <% } %>
                 </div>
 
-                <div>
-                    <label>
+                <div id="registerContainer_repassword">
+                    <label class="labelForm" id="registerLabel_repassword">
+                        <i class="fas fa-exclamation-circle iconTransparent" id="errorIconrepassword"></i>
+                        <i class="far fa-check-circle iconTransparent" id="doneIconrepassword"></i>
                         <span>Repita su contraseña</span>
-                        <input type="password" name="passwordRepeat" autocomplete="off" >
+                        <input type="password" name="passwordRepeat" autocomplete="off" id="registerInput_repassword">
                     </label>
                     <% if (locals.errores && errores.passwordRepeat) { %>
                         <p class="errorForm"> <%= errores.passwordRepeat.msg  %> </p>
@@ -55,9 +63,9 @@
                     <% } %>
                 </div>
 
-                <div>
+                <div id="registerContainer_terminos">
 
-                    <p class="terminosP">Acepto los terminos y condiciones<input type="checkbox" name="terminos" id="" ></p>
+                    <p class="terminosP">Acepto los terminos y condiciones<input type="checkbox" name="terminos" id="registerInput_terminos"></p>
                     
                     <% if (locals.errores && errores.terminos) { %>
                         <p class="errorForm"> <%=errores.terminos.msg %> </p>
@@ -78,5 +86,6 @@
         
     </main>
     <%- include('../partials/footer') %> 
+    <script src="/js/formsRegister.js"></script>
 </body>
 </html>
