@@ -52,12 +52,78 @@ let price2 = qs("price_random2")
 let nameR2 = qs("name_random2")
 
 window.addEventListener("load", async(event) => {
+
+    // CART //
+    let body = document.querySelector('body')
+    let modal = document.createElement('article')
+    let cart = qs('cart_header')
+    let divCart = document.createElement("div")
+
+    cart && cart.addEventListener('click',async e => {
+
+        e.preventDefault()
+        body.appendChild(divCart)
+        divCart.classList.add('containerModal')
+        divCart.setAttribute('id','containerModal')
+
+        divCart.appendChild(modal)
+        modal.classList.add('modal')
+        modal.setAttribute('id','modal')
+
+        modal.innerHTML = `<i id="btn_modalClose" class="fas fa-times"></i><h2 class="CartH2">Carrito de compras</h2><div id="resultContainer_cart"  class="result_container"> </div>`
+
+        const getCart = async () => {
+        
+            try {
+            let response = await fetch(UrlActual + '/cartApi/show-items')    
+            let result = await response.json()
+            return result
+    
+        
+            }catch (error) {
+                console.log(error)
+            }
+                    
+        }
+        let {order,carts} = await getCart() 
+       
+
+        carts.forEach(({product}) => {
+            let {image,id,name,price} = product
+
+            qs('resultContainer_cart').innerHTML += `<a href=/products/detail/${id} class="result_image"><img src="/images/Buzos/${image}"></a><div class="result_description"><p class="result_name">${name}</p><span class="result_price">$${price}</span></div>`})
+     
+    
+    
+         
+                
+    })
+
+    modal && modal.addEventListener('click', (e) => {
+        if(e.target.id === 'btn_modalClose'){
+            modal.innerHTML = ''
+            divCart.remove()
+        }
+
+    })
+
+    divCart && divCart.addEventListener('click', (e) => {
+        if (e.target.id === 'containerModal') {
+            modal.innerHTML = ''
+            divCart.remove()
+        }
+
+    })
+
+
+
     
     // HEADER //
     let header = document.querySelector('header')
     let searchForm = qs('search_form')
     let searchInput = qs('search_input')
     const div = document.createElement("div")
+
 
     searchForm.addEventListener('click', () => {
         header.appendChild(div)

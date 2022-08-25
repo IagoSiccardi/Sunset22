@@ -44,16 +44,15 @@
     
                 <div class="botones">
                     
-                    <a href="" class="cartFav">Añadir al carrito <i class="fas fa-shopping-cart"></i></a>
+                    <button value="<%= product.id %>" class="cartFav" id="addCart">Añadir al carrito <i class="fas fa-shopping-cart"></i></button>
             
-                    <a href="" class="cartFav">Añadir a favoritos <i class="fas fa-heart"></i></a>
+                    <button class="cartFav">Añadir a favoritos <i class="fas fa-heart"></i></button>
 
                     <% if (locals.userLogin && locals.userLogin.rol === "admin") {%> 
-
                         <div class="formEdit">
     
                             
-                            <a href="/products/edit/<%= product.id %> " class="editDelete">Editar <i class="fas fa-edit"></i></a>
+                            <a href="/products/edit/<%= product.id %>" class="editDelete">Editar <i class="fas fa-edit"></i></a>
                             
                             <form action="/products/remove/<%=product.id%>?_method=DELETE" method="post" class="deleteForm">
                                 
@@ -61,6 +60,7 @@
                             </form>
                             
                         </div>
+
 
                     <% } %> 
                     
@@ -108,6 +108,8 @@
     </main>
     <%- include('../partials/footer') %> 
     <script src="/js/productDetail.js"></script>
+    <script src="/js/cart.js"></script>
+
 
 </body>
 </html>

@@ -305,6 +305,16 @@ body header .iconos li a i {
         transform: scale(1.03);
     }
 
+    .modal {
+       
+        
+        position: relative;
+        position: absolute;
+        top: 72px;
+        right: 10px;
+        
+    }
+
 
     .result_div {
         width: 400px;

@@ -29,6 +29,111 @@
 }
 
 
+.containerModal {
+    background-color: rgba(225, 231, 236, 0.493);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    
+}
+
+.containerModal .modal {
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+    height: 50%;
+    width: 90%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.containerModal .modal .CartH2 {
+    
+    width: 100%;
+    color: black;
+    padding: 5px;
+    border-bottom: solid 1px black ;
+
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+#btn_modalClose {
+    position: absolute;
+    font-size: 26px;
+    font-weight: 600;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.modal {
+       
+        
+    position: relative;
+    position: absolute;
+    top: 72px;
+    right: 10px;
+    
+}
+
+
+
+
+.modal .result_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 5px;
+    width: 100%;
+    height: 220px;
+}
+
+.modal .result_container .result_image{
+    width: 150px;
+    height: 150px;
+    
+}
+
+.modal .result_container .result_image img{
+    width: 100%;
+    height: 100%;
+}
+
+.modal .result_container .result_description {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left:5px;
+
+}
+
+.modal .result_container .result_description .result_name {
+    font-size: 16px;
+    color: black;
+    margin-top: 13px;
+    font-family: 'AdihausDIN';
+    font-weight: 500;
+           
+}
+
+.modal .result_container .result_description .result_price{
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    margin-top: 10px;
+    font-family: 'AdihausDIN';
+
+}
+
+
+
 .homeHTML {
     padding-bottom: 250px ;
 }
@@ -348,6 +453,13 @@
 
 @media (min-width : 744px) {
 
+    .containerModal .modal {
+        
+        width: 600px;
+       
+    
+    }
+    
     .home .banner {
         display: flex;
         flex-wrap: wrap;

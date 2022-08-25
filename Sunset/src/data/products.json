@@ -70,12 +70,5 @@
       "collectionId": 1,
       "description": "Buzo canguro con capucha, frizado y de color negro.",
       "image": "buzo5.jpg"
-   },
-   {
-      "id": 10,
-      "name": "",
-      "price": 0,
-      "colecction": "1",
-      "image": "default-img.png"
    }
 ]

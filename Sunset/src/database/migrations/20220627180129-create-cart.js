@@ -14,22 +14,23 @@ module.exports = {
             tableName : 'Orders'
           },
           key : 'id'
-        }
-      },
-      userId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Users'
-          },
-          key : 'id'
-        }
-      },
-      productId: {
+        },
+        onDelete : 'cascade'
+      },productId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
             tableName : 'Products'
+          },
+          key : 'id'
+        }
+      },
+      userId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references : {
+          model : {
+            tableName : 'Users'
           },
           key : 'id'
         }

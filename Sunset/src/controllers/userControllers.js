@@ -22,9 +22,27 @@ module.exports = {
                 include: ["rol"]
             })
 
-            .then((user) => {
+            .then(async(user) => {
+
+                let order = await db.Order.findOne({
+                    where: {
+                        userId: user.id
+                    },
+                    include: [
+                        {
+                            association : 'carts',
+                            include: [
+                                {
+                                    association: 'product'
+                                }
+                            ]
+                        }
+                    ]
+                })
+
 
             req.session.userLogin = {
+                order,
                 id: user.id,
                 name: user.name,
                 rol: user.rol.name
@@ -34,6 +52,7 @@ module.exports = {
             if(req.body.recordame === "on"){
                 res.cookie("userSunset",req.session.userLogin,{maxAge: 1000*60*120})
             }
+
 
            return res.redirect('/')
 
@@ -128,16 +147,20 @@ module.exports = {
                  rolId : 2
              })
 
-             .then(user => {
+             .then(async user => {
+
+               
 
                  req.session.userLogin = {
+                     
                      id: user.id,
                      name : user.name,
                      rolId: user.rolId
                      }
      
                  res.cookie("userSunset",req.session.userLogin,{maxAge: 1000*60*120})
-     
+    
+
                  res.redirect('/')
              })
 

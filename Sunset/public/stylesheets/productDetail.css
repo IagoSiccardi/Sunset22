@@ -170,8 +170,27 @@
     margin-top: 5px;
     background-color: black;
     transition: all 0.5s;
+    border: none;
+    cursor: pointer;
     
 }
+
+.productDetail aside .botones .cartFav:hover {
+    transform: scale(1.05);
+    background-color: var(--Naranja);
+    color: black;
+}
+
+.productDetail aside .botones .cartFav i {
+    background-color: white;
+    padding-top: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: black;
+}
+
+
 
 .productDetail aside .botones a:hover {
     transform: scale(1.05);
