@@ -4,9 +4,7 @@ console.log('Carrito done!')
 
 
 
-
-
-qs('addCart') && qs('addCart').addEventListener('click', async({target}) => {
+  qs('addCart') && qs('addCart').addEventListener('click', async({target}) => {
 
 
     try {
@@ -32,3 +30,5 @@ qs('addCart') && qs('addCart').addEventListener('click', async({target}) => {
         console.log(error)
     }
 }) 
+
+  

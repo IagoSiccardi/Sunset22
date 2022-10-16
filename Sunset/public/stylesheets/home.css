@@ -46,11 +46,33 @@
     position: relative;
     z-index: 1;
     border-radius: 20px;
-    height: 50%;
+    height: auto;
     width: 90%;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+}
+
+.btnCart {
+    padding: 2px;
+    font-size: 14px;
+    color: #000000;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+
+}
+
+.emptyCart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 25px;
+    color: var(--Naranja);
+    text-align: center;
 }
 
 .containerModal .modal .CartH2 {
@@ -73,6 +95,62 @@
     cursor: pointer;
 }
 
+.containerModal .modal .buyDivCart {
+    border-top: solid black 1px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+.containerModal .modal .buyDivCart .buyPCart {
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+    
+}
+
+.containerModal .modal .buyDivCart .buyButtonCart{
+    display: flex;
+    
+    justify-content: center;
+    font-size: 18px;
+    width: 50%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 5px;
+    background-color: black;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+
+}
+
+.containerModal .modal .buyDivCart .buyButtonCart:hover {
+    background-color: var(--Naranja);
+    transform: scale(1.02);
+    color: black;
+}
+
+.containerModal .modal .buyDivCart .buyButtonCart i {
+    padding-top: 5px;
+    font-size: 16px;
+    margin: 0px 5px;
+    background-color: white;
+    color: black;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+
 .modal {
        
         
@@ -92,7 +170,7 @@
     flex-wrap: wrap;
     padding: 5px;
     width: 100%;
-    height: 220px;
+    height: auto;
 }
 
 .modal .result_container .result_image{

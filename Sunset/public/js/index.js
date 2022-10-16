@@ -2,10 +2,12 @@
 console.log('Script done!')
 const qs = (element) => document.getElementById(element)
 
+
+// BOTON DE HAMBURGUESA//
+
 let burgerButton = document.getElementById('burgerMenu')
 let responsiveMenu = document.getElementById('responsiveMenu')
 let contador = 0
-
 
 burgerButton.addEventListener('click', () => {
     
@@ -53,14 +55,38 @@ let nameR2 = qs("name_random2")
 
 window.addEventListener("load", async(event) => {
 
+   
+   
+
     // CART //
     let body = document.querySelector('body')
     let modal = document.createElement('article')
     let cart = qs('cart_header')
     let divCart = document.createElement("div")
 
-    cart && cart.addEventListener('click',async e => {
 
+    const addItem = async (id) => {
+        try {
+          let response = await fetch("/cartApi/add-items", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              id: id,
+            }),
+          });
+          let result = await response.json();
+          showCart(result.carts);
+        } catch (error) {
+          console.error;
+        }
+      };
+
+      // MODAL CARRITO //
+    
+    cart && cart.addEventListener('click',async e => {
+        
         e.preventDefault()
         body.appendChild(divCart)
         divCart.classList.add('containerModal')
@@ -70,8 +96,11 @@ window.addEventListener("load", async(event) => {
         modal.classList.add('modal')
         modal.setAttribute('id','modal')
 
-        modal.innerHTML = `<i id="btn_modalClose" class="fas fa-times"></i><h2 class="CartH2">Carrito de compras</h2><div id="resultContainer_cart"  class="result_container"> </div>`
-
+        modal.innerHTML = `<i id="btn_modalClose" class="fas fa-times"></i><h2 class="CartH2">Carrito de compras</h2><div id="resultContainer_cart"  class="result_container"></div><div class="buyDivCart"><a href=# class="buyButtonCart">Comprar <i class="fas fa-credit-card"></i></a><p class="buyPCart" id="buyPCart"></p></div>`
+        
+        
+        // MOSTRAR CARRITO //
+        
         const getCart = async () => {
         
             try {
@@ -83,21 +112,63 @@ window.addEventListener("load", async(event) => {
             }catch (error) {
                 console.log(error)
             }
-                    
+            
         }
         let {order,carts} = await getCart() 
-       
 
-        carts.forEach(({product}) => {
+
+        if(cart.length = 0 || order === null){
+
+            qs('resultContainer_cart').innerHTML += '<div class="emptyCart">¡Aún no hay articulos en el carrito! </div>'
+        }
+        
+        
+        // CREACION DE ITEMS CARRITO //
+
+
+        
+        carts.forEach(({product,quantity}) => {
+            
+            
             let {image,id,name,price} = product
-
-            qs('resultContainer_cart').innerHTML += `<a href=/products/detail/${id} class="result_image"><img src="/images/Buzos/${image}"></a><div class="result_description"><p class="result_name">${name}</p><span class="result_price">$${price}</span></div>`})
-     
-    
-    
+            
          
+            
+            qs('resultContainer_cart').innerHTML += `<a href=/products/detail//${id} class="result_image"><img src="/images/Buzos/${image}"></a><div class="result_description"><p class="result_name">${name}</p><span class="result_price">Cantidad: <button class="btnCart" value="${id}"><i class="fa-solid fa-minus"></i></button> <input type="text" value="${quantity}" id="quantityInput"> <button id="btnCartAdd" value="${id}" class="btnCart"><i class="fa-solid fa-plus"></i></button></span><span class="result_price">$${price}</span></div>`
+        
+        
+        })
+
+        // AÑADIR ITEM //
+
+        let butonCartAdd = document.querySelectorAll('#btnCartAdd')
+
+        butonCartAdd && butonCartAdd.forEach(butonAdd => {
+            butonAdd.addEventListener('click', async e => {
+
+
+                await addItem(butonAdd.value)
+
+
+                let inputValue = butonAdd.previousSibling.previousElementSibling
+
+                inputValue.value = +inputValue.value + 1
                 
+            })
+            
+            
+        })
+        
+        
+        
     })
+    
+
+   
+   /*   qs('buyPCart').innerTEXT += `Total: $  ` */
+
+
+   // CERRAR MODAL //
 
     modal && modal.addEventListener('click', (e) => {
         if(e.target.id === 'btn_modalClose'){
@@ -115,7 +186,10 @@ window.addEventListener("load", async(event) => {
 
     })
 
+    
 
+    
+    
 
     
     // HEADER //
@@ -123,6 +197,9 @@ window.addEventListener("load", async(event) => {
     let searchForm = qs('search_form')
     let searchInput = qs('search_input')
     const div = document.createElement("div")
+
+
+    // BUSCAR ITEMS //
 
 
     searchForm.addEventListener('click', () => {
