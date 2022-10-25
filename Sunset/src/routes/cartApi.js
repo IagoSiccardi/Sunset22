@@ -7,6 +7,7 @@ const {addItem,list,removeAll,removeItem,removeItemAll} = require ('../controlle
 
 router.get('/show-items', list);
 router.post('/add-items', addItem);
+router.post('/remove-item', removeItem)
 
 
 

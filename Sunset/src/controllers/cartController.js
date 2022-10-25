@@ -96,7 +96,14 @@ module.exports = {
     
   },
 
-  removeItem: async (req, res) => {},
+  removeItem: async (req, res) => {
+
+    let product = await db.Product.findByPk(req.body.id)
+
+    console.log(req.session.userLogin.order.carts);
+
+
+  },
 
   removeItemAll: async (req, res) => {},
 
