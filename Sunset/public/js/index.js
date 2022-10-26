@@ -83,6 +83,27 @@ window.addEventListener("load", async(event) => {
         }
       };
 
+      const removeItem = async (id) => {
+        try {
+          let response = await fetch("/cartApi/remove-item", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              id: id,
+            }),
+          });
+          let result = await response.json();
+          showCart(result.carts);
+        } catch (error) {
+          console.error;
+        }
+      };
+
+
+
+
       // MODAL CARRITO //
     
     cart && cart.addEventListener('click',async e => {
@@ -134,7 +155,7 @@ window.addEventListener("load", async(event) => {
             
          
             
-            qs('resultContainer_cart').innerHTML += `<a href=/products/detail//${id} class="result_image"><img src="/images/Buzos/${image}"></a><div class="result_description"><p class="result_name">${name}</p><span class="result_price">Cantidad: <button class="btnCart" value="${id}"><i class="fa-solid fa-minus"></i></button> <input type="text" value="${quantity}" id="quantityInput"> <button id="btnCartAdd" value="${id}" class="btnCart"><i class="fa-solid fa-plus"></i></button></span><span class="result_price">$${price}</span></div>`
+            qs('resultContainer_cart').innerHTML += `<a href=/products/detail//${id} class="result_image"><img src="/images/Buzos/${image}"></a><div class="result_description"><p class="result_name">${name}</p><span class="result_price">Cantidad: <button class="btnCart" id="btnCartRemove" value="${id}"><i class="fa-solid fa-minus"></i></button> <input type="text" value="${quantity}" id="quantityInput"> <button id="btnCartAdd" value="${id}" class="btnCart"><i class="fa-solid fa-plus"></i></button></span><span class="result_price">$${price}</span></div>`
         
         
         })
@@ -159,8 +180,28 @@ window.addEventListener("load", async(event) => {
             
         })
         
+
+        // ELIMINAR ITEM //
+
+        let butonCartRemove = document.querySelectorAll('#btnCartRemove')
         
+        butonCartRemove && butonCartRemove.forEach(butonRemove => {
+            butonRemove.addEventListener('click', async e => {
+
+                await removeItem(butonRemove.value)
+
+
+                let inputValue = butonRemove.nextSibling.nextElementSibling
+
+                inputValue.value = +inputValue.value - 1
+                
+            })
+            
+            
+        })
         
+
+
     })
     
 
