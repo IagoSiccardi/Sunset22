@@ -6,6 +6,16 @@ console.log('Carrito done!')
 
   qs('addCart') && qs('addCart').addEventListener('click', async({target}) => {
 
+    let cartIcon = document.querySelector('#cart_header')
+    cartIcon.classList.add('cartHeaderDetail')
+
+    setTimeout(() => {
+      cartIcon.classList.remove('cartHeaderDetail')
+      
+    }, 1500);
+
+
+
     try {
 
 
@@ -26,7 +36,8 @@ console.log('Carrito done!')
 
     } catch (error) {
         console.log(error)
+
     }
-}) 
+})  
 
   

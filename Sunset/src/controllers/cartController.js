@@ -51,25 +51,35 @@ module.exports = {
      let product = await db.Product.findByPk(req.body.id);
         if (req.session.userLogin) {
           if (req.session.userLogin.order) {
-            let item = req.session.userLogin.order.carts.find(
-              (cart) => cart.product.id == product.id
+            let item = req.session.userLogin.order.carts.find((cart) => {
+
+              if (product.id) {
+                
+                return cart.product.id == product.id
+              }
+                
+              }
             );
             if (item) {
               await db.Cart.update(
                 {
-                  quantity: item.quantity + 1,
+                  quantity: +item.quantity + 1,
                 },
                 {
                   where: { id: item.id },
                 }
               );
             } else {
-              await db.Cart.create({
-                userId: req.session.userLogin.order.userId,
-                productId: product.id,
-                quantity: 1,
-                orderId: req.session.userLogin.order.id,
-              });
+
+              product.id && 
+                await db.Cart.create({
+                  userId: req.session.userLogin.order.userId,
+                  productId: product.id,
+                  quantity: 1,
+                  orderId: req.session.userLogin.order.id,
+                }); 
+              
+
             }
           } else {
             let newOrder = await db.Order.create({
