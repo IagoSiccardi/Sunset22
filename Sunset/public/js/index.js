@@ -138,27 +138,40 @@ window.addEventListener("load", async(event) => {
         let {order,carts} = await getCart() 
 
 
-        if(cart.length = 0 || order === null){
+        /* if(cart.length = 0 || order === null){
+
+            qs('resultContainer_cart').innerHTML += '<div class="emptyCart">¡Aún no hay articulos en el carrito! </div>'
+        } */
+        
+        if(!qs('cart_article')){
 
             qs('resultContainer_cart').innerHTML += '<div class="emptyCart">¡Aún no hay articulos en el carrito! </div>'
         }
-        
-        
+
         // CREACION DE ITEMS CARRITO //
 
 
-        
         carts.forEach(({product,quantity}) => {
             
             
             let {image,id,name,price} = product
-            
          
             
-            qs('resultContainer_cart').innerHTML += `<a href=/products/detail//${id} class="result_image"><img src="/images/Buzos/${image}"></a><div class="result_description"><p class="result_name">${name}</p><span class="result_price">Cantidad: <button class="btnCart" id="btnCartRemove" value="${id}"><i class="fa-solid fa-minus"></i></button> <input type="text" value="${quantity}" id="quantityInput"> <button id="btnCartAdd" value="${id}" class="btnCart"><i class="fa-solid fa-plus"></i></button></span><span class="result_price">$${price}</span></div>`
+            qs('resultContainer_cart').innerHTML = `
+            <article class="article_cart" id="cart_article">
+            <a href=/products/detail/${id} class="result_image"><img src="/images/Buzos/${image}"></a>
+            <div class="result_description"><p class="result_name">${name}</p><span class="result_price">Cantidad: <button class="btnCart" id="btnCartRemove" value="${id}"><i class="fa-solid fa-minus"></i></button> <input type="text" value="${quantity}" id="quantityInput"> <button id="btnCartAdd" value="${id}" class="btnCart"><i class="fa-solid fa-plus"></i></button></span><span class="result_price">$${price}</span>
+            </div>
+            </article>
+            `
+            
+
         
         
         })
+
+        
+        
 
         // AÑADIR ITEM //
 
@@ -166,6 +179,8 @@ window.addEventListener("load", async(event) => {
 
         butonCartAdd && butonCartAdd.forEach(butonAdd => {
             butonAdd.addEventListener('click', async e => {
+
+                
 
 
                 await addItem(butonAdd.value)
@@ -175,6 +190,9 @@ window.addEventListener("load", async(event) => {
 
                 inputValue.value = +inputValue.value + 1
                 
+
+
+
             })
             
             
@@ -188,18 +206,29 @@ window.addEventListener("load", async(event) => {
         butonCartRemove && butonCartRemove.forEach(butonRemove => {
             butonRemove.addEventListener('click', async e => {
 
-                await removeItem(butonRemove.value)
+                if (butonRemove.value < 1) {
+                    
+                    qs('resultContainer_cart').innerHTML += '<div class="emptyCart">¡Aún no hay articulos en el carrito! </div>'
+
+                } else {
+                    
+                    await removeItem(butonRemove.value)
+    
+    
+                    let inputValue = butonRemove.nextSibling.nextElementSibling
+    
+                    inputValue.value = +inputValue.value - 1
+                }
 
 
-                let inputValue = butonRemove.nextSibling.nextElementSibling
-
-                inputValue.value = +inputValue.value - 1
                 
             })
             
             
         })
         
+        
+
 
 
     })

@@ -106,7 +106,7 @@ module.exports = {
         let item = req.session.userLogin.order.carts.find(
           (cart) => cart.product.id == product.id
         );
-        if (item) {
+        if (item.quantity > 1) {
           await db.Cart.update(
             {
               quantity: item.quantity - 1,
@@ -116,26 +116,13 @@ module.exports = {
             }
           );
         } else {
-          await db.Cart.create({
-            userId: req.session.userLogin.order.userId,
-            productId: product.id,
-            quantity: 1,
-            orderId: req.session.userLogin.order.id,
+          await db.Cart.destroy({
+            
+              where: { id: item.id },
+            
           });
         }
-      } else {
-        let newOrder = await db.Order.create({
-          userId: req.session.userLogin.id,
-          statusId: 'pendiente',
-          total: 0,
-        });
-        await db.Cart.create({
-          userId: newOrder.userId,
-          productId: product.id,
-          quantity: 1,
-          orderId: newOrder.id,
-        });
-      }
+      } 
 
       let order = await getOrder(req.session.userLogin.order.userId);
   
@@ -147,10 +134,6 @@ module.exports = {
       });
 
     }
-
-
-
-
 
 
   },

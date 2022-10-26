@@ -164,6 +164,7 @@
 
 
 
+
 .modal .result_container {
     display: flex;
     justify-content: flex-start;
@@ -173,24 +174,46 @@
     height: auto;
 }
 
+.modal .result_container .article_cart {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10%;
+    padding: 10px
+}
+
+
+.modal .result_container .article_cart:last-child {
+    border-bottom: none
+
+}
+
+
 .modal .result_container .result_image{
-    width: 150px;
+    width: 100%; 
     height: 150px;
-    
+
+    margin-bottom: 20px;
 }
 
 .modal .result_container .result_image img{
-    width: 100%;
-    height: 100%;
+
+    object-fit: cover;
+    width:  100% /* 150px */;
+    height: 175px /* 150px; */
 }
 
 .modal .result_container .result_description {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%; /* 50 */
     padding-left:5px;
 
 }
+
+
+
 
 .modal .result_container .result_description .result_name {
     font-size: 16px;
@@ -208,6 +231,11 @@
     margin-top: 10px;
     font-family: 'AdihausDIN';
 
+}
+
+.modal .result_container .result_description .result_price input{
+    width: 40px;
+    text-align: center;
 }
 
 
@@ -466,6 +494,42 @@
 
     
 @media (min-width : 500px) {
+
+
+    .modal .result_container .result_image{
+        width: 150px; 
+        height: 150px;
+        margin-bottom: 0px;
+    }
+    
+    .modal .result_container .result_image img{
+    
+        
+        width:   150px ;
+        height:  150px;
+    }
+    
+    
+    .modal .result_container .result_description {
+        width:50%;
+        text-align: left;
+    
+    }
+
+
+
+    .modal .result_container .article_cart {
+        
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        flex-direction: row;
+        margin: 0px 0;
+        border-bottom: 1px solid black;
+    }
+
+
+
 
 
 
