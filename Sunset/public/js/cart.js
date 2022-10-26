@@ -6,10 +6,8 @@ console.log('Carrito done!')
 
   qs('addCart') && qs('addCart').addEventListener('click', async({target}) => {
 
-
     try {
 
-        
 
         let response = await fetch('/cartApi/add-items',{
             method : 'POST',
