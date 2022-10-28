@@ -16,6 +16,14 @@
 
 <h2>Screnshoots</h2>
 
+<div>
+<img src="./public/images/Screenshoots/home1080.png" width=100%>
+<img src="./public/images/Screenshoots/carrito1080.png" width=100%>
+<img src="./public/images/Screenshoots/carrito&items1080.png" width=100%>
+<img src="./public/images/Screenshoots/buscador1080.png" width=100%>
+<img src="./public/images/Screenshoots/validaciones1080.png" width=100%>
+</div>
+
 
 
 ## Sitios de referencia:

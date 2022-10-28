@@ -49,6 +49,7 @@ window.addEventListener("load", async (event) => {
   let body = document.querySelector("body");
   let modal = document.createElement("article");
   let cart = qs("cart_header");
+  let cart2 = qs("cart_header2")
   let divCart = document.createElement("div");
 
   const addItem = async (id) => {
@@ -87,7 +88,7 @@ window.addEventListener("load", async (event) => {
     }
   };
 
-  // MODAL CARRITO //
+  // MODAL CARRITO 500px//
 
   cart &&
     cart.addEventListener("click", async (e) => {
@@ -205,6 +206,125 @@ window.addEventListener("load", async (event) => {
         });
     });
 
+
+
+  // MODAL CARRITO 320PX //
+
+    cart2 &&
+    cart2.addEventListener("click", async (e) => {
+      e.preventDefault();
+      body.appendChild(divCart);
+      divCart.classList.add("containerModal");
+      divCart.setAttribute("id", "containerModal");
+
+      divCart.appendChild(modal);
+      modal.classList.add("modal");
+      modal.setAttribute("id", "modal");
+
+      modal.innerHTML = `<i id="btn_modalClose" class="fas fa-times"></i><h2 class="CartH2">Carrito de compras</h2><div id="resultContainer_cart"  class="result_container"></div><div class="buyDivCart"><a href=# class="buyButtonCart">Comprar <i class="fas fa-credit-card"></i></a><p class="buyPCart" id="buyPCart"></p></div>`;
+
+      // MOSTRAR CARRITO //
+
+      const getCart = async () => {
+        try {
+          let response = await fetch(UrlActual + "/cartApi/show-items");
+          let result = await response.json();
+          return result;
+        } catch (error) {
+          console.log(error);
+        }
+      };
+      let { order, carts } = await getCart();
+
+      if (!qs("cart_article")) {
+        qs("resultContainer_cart").innerHTML =
+          '<div class="emptyCart">¡Aún no hay articulos en el carrito! </div>';
+      }
+
+      // CREACION DE ITEMS CARRITO //
+
+      carts.forEach(({ product, quantity }) => {
+        
+        document.querySelector('.emptyCart') && document.querySelector('.emptyCart').remove()
+
+        let { image, id, name, price } = product;
+
+        qs("resultContainer_cart").innerHTML += `
+            <article class="article_cart" id="cart_article">
+            <a href=/products/detail/${id} class="result_image"><img src="/images/Buzos/${image}"></a>
+            <div class="result_description"><p class="result_name">${name}</p><span class="result_price">Cantidad: <button class="btnCart" id="btnCartRemove" value="${id}"><i class="fa-solid fa-minus"></i></button> <input type="text" value="${quantity}" id="quantityInput"> <button id="btnCartAdd" value="${id}" class="btnCart"><i class="fa-solid fa-plus"></i></button></span><span class="result_price">$${price}</span>
+            </div>
+            </article>
+            `;
+      });
+
+      // AÑADIR ITEM //
+
+      let butonCartAdd = document.querySelectorAll("#btnCartAdd");
+
+      butonCartAdd &&
+        butonCartAdd.forEach((butonAdd) => {
+          butonAdd.addEventListener("click", async (e) => {
+            await addItem(butonAdd.value);
+
+            let inputValue = butonAdd.previousSibling.previousElementSibling;
+
+            inputValue.value = +inputValue.value + 1;
+          });
+        });
+
+
+      // ELIMINAR ITEM //
+
+      let butonCartRemove = document.querySelectorAll("#btnCartRemove");
+
+      butonCartRemove && butonCartRemove.forEach((butonRemove) => {
+          butonRemove.addEventListener("click", async (e) => {
+            let inputValue = butonRemove.nextSibling.nextElementSibling;
+            let cartArticle = document.querySelectorAll('#cart_article')
+
+            if (cartArticle.length === 1) {
+                
+
+                if (qs("cart_article")) {
+                
+                    if (inputValue.value <= 1){
+    
+                        await removeItem(butonRemove.value);
+                        inputValue.value = +inputValue.value - 1;
+                        butonRemove.closest('#cart_article').remove()
+                        qs("resultContainer_cart").innerHTML =
+                        '<div class="emptyCart">¡Aún no hay articulos en el carrito! </div>';
+                        
+                    
+                    } else {
+        
+                        await removeItem(butonRemove.value);
+                        inputValue.value = +inputValue.value - 1;
+    
+                    }   
+                }
+            }else {
+                if (inputValue.value <= 1){
+    
+                    await removeItem(butonRemove.value);
+                    inputValue.value = +inputValue.value - 1;
+                    butonRemove.closest('#cart_article').remove()
+                    
+                    
+                
+                } else {
+    
+                    await removeItem(butonRemove.value);
+                    inputValue.value = +inputValue.value - 1;
+
+                }   
+
+            }
+
+          });
+        });
+    });
 
   // CERRAR MODAL //
 
