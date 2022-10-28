@@ -1,5 +1,3 @@
-# ProyectoIntegrador-iago-C14
-
 # Sunset
 
 <div align="center"><img src="/Wireframes/Otros/sunset.png" alt="icon"></div>
