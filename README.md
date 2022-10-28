@@ -19,11 +19,16 @@
 <div>
 <img src="./Sunset/public/images/Screenshoots/home1080.png" width=100%>
 <img src="./Sunset/public/images/Screenshoots/carrito1080.png" width=100%>
-<img src="./Sunset/public/images/Screenshoots/carrito&items1080.png" width=100%>
+<img src="./Sunset/public/images/Screenshoots/carrito&items.png" width=100%>
 <img src="./Sunset/public/images/Screenshoots/buscador1080.png" width=100%>
 <img src="./Sunset/public/images/Screenshoots/validaciones1080.png" width=100%>
 </div>
+<div>
+<img src="./Sunset/public/images/Screenshoots/burgerButton.png" width=100%>
+<img src="./Sunset/public/images/Screenshoots/productDetail.png" width=100%>
+<img src="./Sunset/public/images/Screenshoots/perfil.png" width=100%>
 
+</div>
 
 
 ## Sitios de referencia:
