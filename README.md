@@ -13,6 +13,33 @@
 <li>Carrito de compras.</li>
 </ul>
 
+<h2>Base de datos</h2>
+
+```
+Crear el arhivo .env y darle valor a las variables de entorno según corresponda.
+```
+<ul>
+<li>DB_USERNAME=</>
+<li>DB_PASSWORD=</li>
+<li>DB_DATABASE=sunset_db</li>
+<li>DB_HOST=127.0.0.1</li>
+</ul>
+
+### Crear la base de datos con **migraciones**
+Es necesario tener instalado [sequelize-cli](https://www.npmjs.com/package/sequelize-cli)
+```
+$ npm install -g sequelize-cli
+```
+Crear la base de datos
+```
+$ sequelize db:create
+```
+Correr migraciones y seeders
+```
+$ sequelize db:migrate
+$ sequelize db:seed:all
+```
+
 
 <h2>Screnshoots</h2>
 
@@ -29,28 +56,12 @@
 <h3>Mobile</h3>
 
 <div>
-<img src="./Sunset/public/images/Screenshoots/burgerbutton.png">
-<img src="./Sunset/public/images/Screenshoots/productDetail.png">
-<img src="./Sunset/public/images/Screenshoots/perfil.png">
-<img src="./Sunset/public/images/Screenshoots/carrito.png">
+<img src="./Sunset/public/images/Screenshoots/burgerbutton.png width=50%>
+<img src="./Sunset/public/images/Screenshoots/productDetail.png" width=50%>
+<img src="./Sunset/public/images/Screenshoots/perfil.png" width=50%>
+<img src="./Sunset/public/images/Screenshoots/carrito.png" width=50%>
 
 </div>
-
-
-## Sitios de referencia:
-
-Por las funcionalidades implementadas : [Adidas Argentina](https://www.adidas.com.ar)
-
-Por los clientes hacia los que apunta : [Drop Kings](https://www.dropkings.site)
-
-Por los productos o servicios que ofrece : [Cncpt](https://www.cncpt.com.ar)
-
-Por la estetica que presenta : [MCMXC](https://mcmxc.flashcookie.com/)
-
-***La tematica del proyecto es de Buzos, con un publico objetivo de adolescentes en adelante.***
-
-<div align="center"><img src="/Wireframes/Otros/sunset.png" alt="icon"></div>
-
 
 ## Iago Siccardi, 19 años.
 
