@@ -55,11 +55,11 @@ $ sequelize db:seed:all
 
 <h3>Mobile</h3>
 
-<div style="display:flex; flex-wrap:wrap">
-<img src="./Sunset/public/images/Screenshoots/burgerbutton.png" width=50%>
-<img src="./Sunset/public/images/Screenshoots/productDetail.png" width=50%>
-<img src="./Sunset/public/images/Screenshoots/perfil.png" width=50%>
-<img src="./Sunset/public/images/Screenshoots/carrito.png" width=50%>
+<div>
+<img src="./Sunset/public/images/Screenshoots/burgerbutton.png" width=40%>
+<img src="./Sunset/public/images/Screenshoots/productDetail.png" width=40%>
+<img src="./Sunset/public/images/Screenshoots/perfil.png" width=40%>
+<img src="./Sunset/public/images/Screenshoots/carrito.png" width=40%>
 
 </div>
 
