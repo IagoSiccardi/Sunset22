@@ -24,9 +24,9 @@
 <img src="./Sunset/public/images/Screenshoots/validaciones1080.png" width=100%>
 </div>
 <div>
-<img src="./Sunset/public/images/Screenshoots/burgerButton.png">
-<img src="./Sunset/public/images/Screenshoots/productDetail.png">
-<img src="./Sunset/public/images/Screenshoots/perfil.png">
+<img src="./Sunset/public/images/Screenshoots/burgerbutton.png" heigt=350px>
+<img src="./Sunset/public/images/Screenshoots/productDetail.png" heigt=350px>
+<img src="./Sunset/public/images/Screenshoots/perfil.png" heigt=350px>
 
 </div>
 
