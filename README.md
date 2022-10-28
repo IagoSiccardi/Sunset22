@@ -1,8 +1,22 @@
-# Sunset
+<h1>Sunset</h1>
 
-<div align="center"><img src="/Wireframes/Otros/sunset.png" alt="icon"></div>
+***Sitio realizado utilizando NodeJS y Express. La base de datos utilizada fue MySQL.*** 
 
-Sunset nace por la necesidad de reprensentar modelos unicos no vistos en ninguna otra pagina. Empezo como un hobbie, pero poco a poco, logramos que ademas de ser un pasatiempo se vuelva un ambicioso proyeto con el objetivo de compartir estos modelos con el mundo.
+<h2>Caracteristicas</h2>
+
+<ul>
+<li>Es responsive.</li>
+<li>Capacidad de añadir items.</li>
+<li>Posibilidad de iniciar y crear sesión.</li>
+<li>Validaciones Frontend y Backend.</li>
+<li>Buscador en tiempo real.</li>
+<li>Carrito de compras.</li>
+</ul>
+
+
+<h2>Screnshoots</h2>
+
+
 
 ## Sitios de referencia:
 
@@ -16,8 +30,9 @@ Por la estetica que presenta : [MCMXC](https://mcmxc.flashcookie.com/)
 
 ***La tematica del proyecto es de Buzos, con un publico objetivo de adolescentes en adelante.***
 
-## Iago Siccardi, 18 años.
+<div align="center"><img src="/Wireframes/Otros/sunset.png" alt="icon"></div>
 
-### ***Tablero***
 
-[Trello](https://trello.com/b/pTY5Jit9/proyecto-integrador)
+## Iago Siccardi, 19 años.
+
+
